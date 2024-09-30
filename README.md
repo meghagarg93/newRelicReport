@@ -8,5 +8,5 @@ If the date is not provided, then program will run with the today's date
 
 Add .env file as below
 
-API_KEY=<<new relic API Key>>
-ACCOUNT_ID=<<new Relic Account ID>>
+API_KEY={new relic API Key}
+ACCOUNT_ID={new Relic Account ID}
