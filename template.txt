@@ -1,0 +1,52 @@
+New Relic Daily Monitoring 
+
+Observations TimeFrame : <<Date2>> - <<Date1>>
+
+As part of daily performance monitoring activity, I have provided below my observations for Infrastructure and Performance metrics.
+
+Maximum Concurrent Users/15 mins – <<maxValue>> at <<maxTime>>
+
+
+Total Actions:
+=========
+-Total Actions  – <<totalaction>> M
+-New Registrations – <<new_reg>> k
+-XAPI Statements Count/day – <<xapicountperday>> M
+-Peak XAPI Statements Count/hour – <<xapicountperhour>> K
+
+
+Infrastructure:
+=========
+Elasticache Memory usage:
+-Analytic ClassRecord Memory used is <<classmem>> %
+-Analytics Memory used is <<memory>> %
+
+
+Performance:
+=========
+1. Average Largest Contentful Paint (LCP): <<largestContentfulPaint>> sec
+
+2. Average First Contentful Paint (FCP): <<firstContentfulPaint>> sec
+
+3. Daily Apdex score is: <<apdexScore>> (<<Comparator>> the previous day, i.e. <<cmpamt>>)
+
+Top countries:
+-<<ct1>>: Current: <<apdexct1>> (<<Comparator2>> the previous day, i.e. <<cmpamt2>>)
+-<<ct2>>: Current: <<apdexct2>> (<<Comparator3>> the previous day, i.e. <<cmpamt3>>)
+
+4. Average Page Response Time:
+   - Average Page Response Time (SPA) : <<averageDuration>> s (<<Comparator1>> by <<cmpamt1>> ms from
+the previous day)
+   - Average Page Response Time (SPA for 99.9% users) ~<<nnp_user>> s (<<Comparator4>>  <<old_nnp_user>> ms from
+the previous day)
+
+
+Anomalies:
+=========
+<<anomalies>>
+
+
+Incidents:
+=========
+<<incident2>>
+<<Incidents_to_add>> 

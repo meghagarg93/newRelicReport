@@ -1,0 +1,66 @@
+New Relic Daily Monitoring 
+
+Observations TimeFrame : 2024-09-29 11:00:00+0530 - 2024-09-30 11:00:00+0530
+
+As part of daily performance monitoring activity, I have provided below my observations for Infrastructure and Performance metrics.
+
+Maximum Concurrent Users/15 mins – 6509 at 30/9/2024, 7:30:00 am
+
+
+Total Actions:
+=========
+-Total Actions  – 2.95 M
+-New Registrations – 16 k
+-XAPI Statements Count/day – 11.19 M
+-Peak XAPI Statements Count/hour – 878 K
+
+
+Infrastructure:
+=========
+Elasticache Memory usage:
+-Analytic ClassRecord Memory used is 50.09 %
+-Analytics Memory used is 14.48 %
+
+
+Performance:
+=========
+1. Average Largest Contentful Paint (LCP): 2.81 sec
+
+2. Average First Contentful Paint (FCP): 1.69 sec
+
+3. Daily Apdex score is: 0.89 (Increased from the previous day, i.e. 0.88)
+
+Top countries:
+-MX: Current: 0.9 (Increased from the previous day, i.e. 0.89)
+-PE: Current: 0.89 (Same as the previous day, i.e. 0.89)
+
+4. Average Page Response Time:
+   - Average Page Response Time (SPA) : 4.93 s (Increased by 158.23 ms from
+the previous day)
+   - Average Page Response Time (SPA for 99.9% users) ~3.89 s (Increased by  80 ms from
+the previous day)
+
+
+Anomalies:
+=========
+No Anomalies were detected during this time frame.
+
+
+Incidents:
+=========
+ElasticSearchService | LTI Prod | High CPU Usage 
+  logs-central-prod1 query result is > 80.0 for 5 minutes on 'ElasticSearchService | LTI Prod | High CPU Usage' : 3 occurrences 
+
+ElasticSearchService | LTI Prod | High CPU Usage 
+  logs-central-prod1 query result is > 70.0 for 5 minutes on 'ElasticSearchService | LTI Prod | High CPU Usage' : 3 occurrences 
+
+ECS |Prod | Apps | Level 2 High CPU Usage Warning 
+  Provider . Cpu Utilization . Average > 60.0 for at least 5 minutes on 'NlpAppWeb' : 2 occurrences 
+
+OpenSearchService | Prod | High CPU Usage 
+  Provider . CPU Utilization . Maximum > 70.0 for at least 5 minutes on 'es-logs-cup-prod1-new' : 2 occurrences 
+
+ECS |Prod | Apps | Level 2 High CPU Usage Warning 
+  Provider . Cpu Utilization . Average > 60.0 for at least 5 minutes on 'NotificationsAppWeb' : 1 occurrences 
+
+
