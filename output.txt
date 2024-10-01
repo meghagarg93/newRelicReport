@@ -1,43 +1,43 @@
 New Relic Daily Monitoring 
 
-Observations TimeFrame : 2024-09-29 11:00:00+0530 - 2024-09-30 11:00:00+0530
+Observations TimeFrame : 2024-09-30 11:00:00+0530 - 2024-10-01 11:00:00+0530
 
 As part of daily performance monitoring activity, I have provided below my observations for Infrastructure and Performance metrics.
 
-Maximum Concurrent Users/15 mins – 6509 at 30/9/2024, 7:30:00 am
+Maximum Concurrent Users/15 mins – 7802 at 30/9/2024, 8:30:00 pm
 
 
 Total Actions:
 =========
--Total Actions  – 2.95 M
--New Registrations – 16 k
--XAPI Statements Count/day – 11.19 M
--Peak XAPI Statements Count/hour – 878 K
+-Total Actions  – 3.02 M
+-New Registrations – 24 k
+-XAPI Statements Count/day – 7.28 M
+-Peak XAPI Statements Count/hour – 460 K
 
 
 Infrastructure:
 =========
 Elasticache Memory usage:
--Analytic ClassRecord Memory used is 50.09 %
--Analytics Memory used is 14.48 %
+-Analytic ClassRecord Memory used is 56.36 %
+-Analytics Memory used is 10.41 %
 
 
 Performance:
 =========
-1. Average Largest Contentful Paint (LCP): 2.81 sec
+1. Average Largest Contentful Paint (LCP): 3.29 sec
 
 2. Average First Contentful Paint (FCP): 1.69 sec
 
-3. Daily Apdex score is: 0.89 (Increased from the previous day, i.e. 0.88)
+3. Daily Apdex score is: 0.87 (Reduced from the previous day, i.e. 0.89)
 
 Top countries:
--MX: Current: 0.9 (Increased from the previous day, i.e. 0.89)
--PE: Current: 0.89 (Same as the previous day, i.e. 0.89)
+-MX: Current: 0.88 (Reduced from the previous day, i.e. 0.9)
+-ES: Current: 0.89 (Reduced from the previous day, i.e. 0.91)
 
 4. Average Page Response Time:
-   - Average Page Response Time (SPA) : 4.93 s (Increased by 158.23 ms from
+   - Average Page Response Time (SPA) : 4.42 s (Reduced by 505.03 ms from
 the previous day)
-   - Average Page Response Time (SPA for 99.9% users) ~3.89 s (Increased by  80 ms from
+   - Average Page Response Time (SPA for 99.9% users) ~3.59 s (Reduced by  300 ms from
 the previous day)
 
 
@@ -49,13 +49,13 @@ No Anomalies were detected during this time frame.
 Incidents:
 =========
 ElasticSearchService | LTI Prod | High CPU Usage 
-  logs-central-prod1 query result is > 80.0 for 5 minutes on 'ElasticSearchService | LTI Prod | High CPU Usage' : 3 occurrences 
+  logs-central-prod1 query result is > 80.0 for 5 minutes on 'ElasticSearchService | LTI Prod | High CPU Usage' : 5 occurrences 
 
 ElasticSearchService | LTI Prod | High CPU Usage 
-  logs-central-prod1 query result is > 70.0 for 5 minutes on 'ElasticSearchService | LTI Prod | High CPU Usage' : 3 occurrences 
+  logs-central-prod1 query result is > 70.0 for 5 minutes on 'ElasticSearchService | LTI Prod | High CPU Usage' : 5 occurrences 
 
-ECS |Prod | Apps | Level 2 High CPU Usage Warning 
-  Provider . Cpu Utilization . Average > 60.0 for at least 5 minutes on 'NlpAppWeb' : 2 occurrences 
+OpenSearchService | Prod | High CPU Usage 
+  Provider . CPU Utilization . Maximum > 80.0 for at least 5 minutes on 'es-logs-cup-prod1-new' : 2 occurrences 
 
 OpenSearchService | Prod | High CPU Usage 
   Provider . CPU Utilization . Maximum > 70.0 for at least 5 minutes on 'es-logs-cup-prod1-new' : 2 occurrences 
