@@ -12,7 +12,6 @@ xapicountperday
 xapicountperhour
 totalaction
 top2countries
-old_top2countries
 incidents
 new_reg
 percentile
@@ -21,4 +20,6 @@ nnp_user
 old_nnp_user
 incident2
 anomalies
+old_ct1
+old_ct2
 

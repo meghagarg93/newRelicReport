@@ -6,19 +6,28 @@ import { log } from "console";
 import { query } from "express";
 import dotenv from "dotenv";
 
-dotenv.config();  // Load environment variables from .env
+dotenv.config(); // Load environment variables from .env
 
-const API_KEY = process.env.API_KEY;  // Use API_KEY from .env
-const ACCOUNT_ID = process.env.ACCOUNT_ID;  // Use ACCOUNT_ID from .env
+const API_KEY = process.env.API_KEY; // Use API_KEY from .env
+const ACCOUNT_ID = process.env.ACCOUNT_ID; // Use ACCOUNT_ID from .env
 
-const reportDate = process.argv[2] ? moment(process.argv[2], "YYYY-MM-DD") : moment();  // Use the provided date or default to today
+const reportDate = process.argv[2]
+  ? moment(process.argv[2], "YYYY-MM-DD")
+  : moment(); // Use the provided date or default to today
 const today = reportDate.format("YYYY-MM-DD 11:00:00+0530");
-const yesterday = reportDate.clone().subtract(1, "day").format("YYYY-MM-DD 11:00:00+0530");
-const daybfryesterday = reportDate.clone().subtract(2, "day").format("YYYY-MM-DD 11:00:00+0530");
-
+const yesterday = reportDate
+  .clone()
+  .subtract(1, "day")
+  .format("YYYY-MM-DD 11:00:00+0530");
+const daybfryesterday = reportDate
+  .clone()
+  .subtract(2, "day")
+  .format("YYYY-MM-DD 11:00:00+0530");
 
 let var_percentile = "";
 let old_percentile = "";
+let ct1 = "";
+let ct2 = "";
 
 const QUERIES = {
   average_duration: `
@@ -161,11 +170,33 @@ const QUERIES = {
       }
     }
   `,
-  old_top2countries: `
+  // old_top2countries: `
+  //   {
+  //     actor {
+  //       account(id: ${ACCOUNT_ID}) {
+  //         nrql(query: "SELECT count(*) as 'Page Hits', apdex(duration, t: 3.5) as 'Apdex' FROM BrowserInteraction FACET countryCode where appName = 'c1-prod1' and duration < 300 SINCE '${daybfryesterday}' UNTIL '${yesterday}' ORDER BY 'Page Hits' DESC limit 2") {
+  //           results
+  //         }
+  //       }
+  //     }
+  //   }
+  // `,
+  old_ct1: `
     {
       actor {
         account(id: ${ACCOUNT_ID}) {
-          nrql(query: "SELECT count(*) as 'Page Hits', apdex(duration, t: 3.5) as 'Apdex' FROM BrowserInteraction FACET countryCode where appName = 'c1-prod1' and duration < 300 SINCE '${daybfryesterday}' UNTIL '${yesterday}' ORDER BY 'Page Hits' DESC limit 2") {
+          nrql(query: "SELECT count(*) as 'Page Hits', apdex(duration, t: 3.5) as 'Apdex' FROM BrowserInteraction where countryCode = '${ct1}' and appName = 'c1-prod1' and duration < 300 SINCE '${yesterday}' UNTIL '${today}'") {
+            results
+          }
+        }
+      }
+    }
+  `,
+  old_ct2: `
+    {
+      actor {
+        account(id: ${ACCOUNT_ID}) {
+          nrql(query: "SELECT count(*) as 'Page Hits', apdex(duration, t: 3.5) as 'Apdex' FROM BrowserInteraction where countryCode = '${ct2}' and appName = 'c1-prod1' and duration < 300 SINCE '${yesterday}' UNTIL '${today}'") {
             results
           }
         }
@@ -374,6 +405,12 @@ const fetchDataForQueryId = async (queryId) => {
         op += "No Anomalies were detected during this time frame.";
       }
       return op;
+    } else if(queryId == "old_ct1" || queryId == "old_ct2"){
+      // console.log("ooo");
+      // console.log(response);
+      // console.log(resultData.score);
+      return resultData.score;
+      
     } else {
       return Object.values(resultData)[0];
     }
@@ -412,8 +449,7 @@ const readCsvAndFetchData = async () => {
   let xapicountperhour = "";
   let memory = "";
   let totalaction = "";
-  let ct1 = "";
-  let ct2 = "";
+
   let apdexct1 = "";
   let apdexct2 = "";
   let old_ct1 = "";
@@ -430,7 +466,7 @@ const readCsvAndFetchData = async () => {
   let anomalies = "";
   for (const row of records) {
     const queryId = row.queryId;
-    console.log(`${queryId} query processed!!`);
+    console.log(`${queryId} query processing!!`);
     try {
       const data = await fetchDataForQueryId(queryId);
       if (queryId === "apdex") {
@@ -460,17 +496,45 @@ const readCsvAndFetchData = async () => {
       } else if (queryId == "totalaction") {
         totalaction = Math.abs(data / 1000000);
       } else if (queryId == "top2countries") {
-
         ct1 = data[0].facet;
         ct2 = data[1].facet;
         apdexct1 = data[0].score;
         apdexct2 = data[1].score;
-      } else if (queryId == "old_top2countries") {
-        old_ct1 = data[0].facet;
-        old_ct2 = data[1].facet;
-        old_apdexct1 = data[0].score;
-        old_apdexct2 = data[1].score;
-      } else if (queryId == "incidents") {
+        // console.log(ct1);
+        // console.log(ct2);
+        QUERIES.old_ct1 = `
+          {
+      actor {
+        account(id: ${ACCOUNT_ID}) {
+          nrql(query: "SELECT count(*) as 'Page Hits', apdex(duration, t: 3.5) as 'Apdex' FROM BrowserInteraction where countryCode = '${ct1}' and appName = 'c1-prod1' and duration < 300 SINCE '${daybfryesterday}' UNTIL '${yesterday}'") {
+            results
+          }
+        }
+      }
+    }
+        `;
+        QUERIES.old_ct2 = `
+          {
+      actor {
+        account(id: ${ACCOUNT_ID}) {
+          nrql(query: "SELECT count(*) as 'Page Hits', apdex(duration, t: 3.5) as 'Apdex' FROM BrowserInteraction where countryCode = '${ct2}' and appName = 'c1-prod1' and duration < 300 SINCE '${daybfryesterday}' UNTIL '${yesterday}'") {
+            results
+          }
+        }
+      }
+    }
+        `;
+        // console.log(QUERIES.old_ct1);
+        // console.log(QUERIES.old_ct2);
+        
+      }
+      //  else if (queryId == "old_top2countries") {
+      //   old_ct1 = data[0].facet;
+      //   old_ct2 = data[1].facet;
+      //   old_apdexct1 = data[0].score;
+      //   old_apdexct2 = data[1].score;
+      // } 
+      else if (queryId == "incidents") {
         incidents = data;
       } else if (queryId == "new_reg") {
         new_reg = data;
@@ -506,9 +570,16 @@ const readCsvAndFetchData = async () => {
         old_nnp_user = data;
       } else if (queryId == "incident2") {
         incident2 = data;
-      }
-      else if (queryId == "anomalies") {
+      } else if (queryId == "anomalies") {
         anomalies = data;
+      }
+      else if(queryId == "old_ct1"){
+        // console.log("old_ct1 " + data);
+        old_ct1 = data;
+      }
+      else if(queryId == "old_ct2"){
+        // console.log("old_ct2 " + data);
+        old_ct2 = data;
       }
     } catch (error) {
       console.error(`Error processing query ID ${queryId}:`, error.message);
@@ -520,13 +591,28 @@ const readCsvAndFetchData = async () => {
     .replace("<<Date1>>", today)
     .replace("<<Date2>>", yesterday)
     .replace("<<apdexScore>>", apdexScore)
-    .replace("<<averageDuration>>", Number.parseFloat(averageDuration).toFixed(2))
-    .replace("<<largestContentfulPaint>>", Number.parseFloat(largestContentfulPaint).toFixed(2))
-    .replace("<<firstContentfulPaint>>", Number.parseFloat(firstContentfulPaint).toFixed(2))
+    .replace(
+      "<<averageDuration>>",
+      Number.parseFloat(averageDuration).toFixed(2)
+    )
+    .replace(
+      "<<largestContentfulPaint>>",
+      Number.parseFloat(largestContentfulPaint).toFixed(2)
+    )
+    .replace(
+      "<<firstContentfulPaint>>",
+      Number.parseFloat(firstContentfulPaint).toFixed(2)
+    )
     .replace("<<classmem>>", Number.parseFloat(classmem).toFixed(2))
     .replace("<<memory>>", Number.parseFloat(memory).toFixed(2))
-    .replace("<<xapicountperday>>", Number.parseFloat(xapicountperday).toFixed(2))
-    .replace("<<xapicountperhour>>", Number.parseFloat(xapicountperhour / 1000).toFixed(0))
+    .replace(
+      "<<xapicountperday>>",
+      Number.parseFloat(xapicountperday).toFixed(2)
+    )
+    .replace(
+      "<<xapicountperhour>>",
+      Number.parseFloat(xapicountperhour / 1000).toFixed(0)
+    )
     .replace("<<totalaction>>", Number.parseFloat(totalaction).toFixed(2))
     .replace("<<ct1>>", ct1)
     .replace("<<ct2>>", ct2)
@@ -539,7 +625,7 @@ const readCsvAndFetchData = async () => {
     .replace("<<nnp_user>>", Number.parseFloat(nnp_user).toFixed(2))
     .replace("<<incident2>>", incident2)
     .replace("<<anomalies>>", anomalies);
-  let cmpamt = Math.abs(apdexScore - old_apdexScore)
+  let cmpamt = Math.abs(apdexScore - old_apdexScore);
   if (apdexScore == old_apdexScore) {
     template = template
       .replace("<<Comparator>>", "Same as")
@@ -564,33 +650,33 @@ const readCsvAndFetchData = async () => {
       .replace("<<cmpamt1>>", Number.parseFloat(cmpamt1 * 1000).toFixed(2));
   }
 
-  if (old_apdexct1 == apdexct1) {
+  if (old_ct1 == apdexct1) {
     template = template
       .replace("<<Comparator2>>", "Same as")
-      .replace("<<cmpamt2>>", old_apdexct1);
-  } else if (old_apdexct1 > apdexct1) {
+      .replace("<<cmpamt2>>", old_ct1);
+  } else if (old_ct1 > apdexct1) {
     template = template
       .replace("<<Comparator2>>", "Reduced from")
-      .replace("<<cmpamt2>>", old_apdexct1);
+      .replace("<<cmpamt2>>", old_ct1);
   } else {
     template = template
       .replace("<<Comparator2>>", "Increased from")
-      .replace("<<cmpamt2>>", old_apdexct1);
+      .replace("<<cmpamt2>>", old_ct1);
   }
 
   //
-  if (old_apdexct2 == apdexct2) {
+  if (old_ct2 == apdexct2) {
     template = template
       .replace("<<Comparator3>>", "Same as")
-      .replace("<<cmpamt3>>", old_apdexct2);
-  } else if (old_apdexct2 > apdexct2) {
+      .replace("<<cmpamt3>>", old_ct2);
+  } else if (old_ct2 > apdexct2) {
     template = template
       .replace("<<Comparator3>>", "Reduced from")
-      .replace("<<cmpamt3>>", old_apdexct2);
+      .replace("<<cmpamt3>>", old_ct2);
   } else {
     template = template
       .replace("<<Comparator3>>", "Increased from")
-      .replace("<<cmpamt3>>", old_apdexct2);
+      .replace("<<cmpamt3>>", old_ct2);
   }
 
   if (nnp_user < old_nnp_user) {

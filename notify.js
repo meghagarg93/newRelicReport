@@ -33,8 +33,8 @@ export default function sendEmail() {
       // Define email options with HTML content
       var mailOptions = {
         from: "cupteamtool@gmail.com",
-        to: 'saiyam.sachdeva@comprotechnologies.com',
         to: 'megha.garg@comprotechnologies.com',
+        to: 'saiyam.sachdeva@comprotechnologies.com',
         subject: 'New Relic Report Status',
         html: `
           <pre>${textData}</pre>
