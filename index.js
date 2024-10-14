@@ -207,7 +207,7 @@ const QUERIES = {
     {
       actor {
         account(id: ${ACCOUNT_ID}) {
-          nrql(query: "SELECT policyName,priority,conditionName, title, openTime, closeTime FROM NrAiIncident WHERE policyName IN ('C1 Prod Synthetic Failure Alerts','C1|PROD1|SyntheticFailure') and event = 'open' LIMIT MAX SINCE '${yesterday}' UNTIL '${today}'") {
+          nrql(query: "SELECT policyName,priority,conditionName, title, openTime, closeTime FROM NrAiIncident WHERE policyName IN ('C1 Prod Synthetic Failure Alerts','C1|PROD1|SyntheticFailure') and event = 'close' LIMIT MAX SINCE '${yesterday}' UNTIL '${today}'") {
             results
           }
         }
@@ -349,7 +349,7 @@ const fetchDataForQueryId = async (queryId) => {
         return op;
       } else {
         x.forEach((element) => {
-          const closeTime = new Date(element.closeTime);
+          const closeTime = new Date(element.timestamp);
           const openTime = new Date(element.openTime);
           const title = element.title;
           const conditionName = element.conditionName;

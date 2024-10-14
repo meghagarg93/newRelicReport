@@ -75,7 +75,7 @@ const configuration = {
     // Call the drive upload function
     // await uploadToDrive("Upload message", { chart: "chart.png" });
     // console.log("Chart uploaded to Google Drive");
-    // await sendEmail();
+    await sendEmail();
 
   } catch (error) {
     console.error("Error generating chart:", error);
