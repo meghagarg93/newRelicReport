@@ -14,15 +14,15 @@ const ACCOUNT_ID = process.env.ACCOUNT_ID; // Use ACCOUNT_ID from .env
 const reportDate = process.argv[2]
   ? moment(process.argv[2], "YYYY-MM-DD")
   : moment(); // Use the provided date or default to today
-const today = reportDate.format("YYYY-MM-DD 11:00:00+0530");
+const today = reportDate.format("YYYY-MM-DD 10:00:00+0530");
 const yesterday = reportDate
   .clone()
   .subtract(1, "day")
-  .format("YYYY-MM-DD 11:00:00+0530");
+  .format("YYYY-MM-DD 10:00:00+0530");
 const daybfryesterday = reportDate
   .clone()
   .subtract(2, "day")
-  .format("YYYY-MM-DD 11:00:00+0530");
+  .format("YYYY-MM-DD 10:00:00+0530");
 
 let var_percentile = "";
 let old_percentile = "";
