@@ -69,7 +69,7 @@ const configuration = {
   try {
     const imageBuffer = await chartJSNodeCanvas.renderToBuffer(configuration);
     const chartPath = path.join('', "chart.png");
-    fs.writeFileSync(chartPath, imageBuffer);
+    // fs.writeFileSync(chartPath, imageBuffer);
     console.log("Chart saved as chart.png");
 
     // Call the drive upload function
