@@ -4,7 +4,7 @@ import path from "path";
 // const fs = require('fs');
 // const unique = require('./index.js');
 import { unique } from "./index.js";
-import {uploadToDrive} from "./driveUpload.js";
+// import {uploadToDrive} from "./driveUpload.js";
 import sendEmail from "./notify.js";
 
 const checkUnique = async () => {
@@ -69,7 +69,7 @@ const configuration = {
   try {
     const imageBuffer = await chartJSNodeCanvas.renderToBuffer(configuration);
     const chartPath = path.join('', "chart.png");
-    // fs.writeFileSync(chartPath, imageBuffer);
+    fs.writeFileSync(chartPath, imageBuffer);
     console.log("Chart saved as chart.png");
 
     // Call the drive upload function
