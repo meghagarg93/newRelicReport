@@ -6,7 +6,8 @@ import path from "path";
 import { unique } from "./index.js";
 // import {uploadToDrive} from "./driveUpload.js";
 import sendEmail from "./notify.js";
-import {postToBasecamp, getsgid} from "./basecamp.js";
+import {postToBasecamp, getsgid, checkAndUpdateExpiresIn} from "./basecamp.js";
+import { startServer } from './startserver.js';
 
 
 const checkUnique = async () => {
@@ -84,8 +85,10 @@ if (data === "Error Processing data") {
       // Call the drive upload function
       // await uploadToDrive("Upload message", { chart: "chart.png" });
       // console.log("Chart uploaded to Google Drive");
-      await sendEmail(0);
+      
       await getsgid();
+      await checkAndUpdateExpiresIn();
+      await sendEmail(0);
       await postToBasecamp();
 
     } catch (error) {

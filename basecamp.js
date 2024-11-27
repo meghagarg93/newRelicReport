@@ -3,12 +3,12 @@ import fs from "fs";
 import axios from "axios";
 import { time } from "console";
 import moment from "moment";
-
+import { startServer } from './startserver.js';
 let access_token = data.access_token;
 let refresh_token = data.refresh_token;
 let creation_date = data.day_created;
 
-function checkAndUpdateExpiresIn() {
+async function checkAndUpdateExpiresIn() {
   const currentDate = moment().format("YYYY-MM-DD");
   const curr_day = moment().format("DD");
   const curr_mon = moment().format("MM");
@@ -16,20 +16,32 @@ function checkAndUpdateExpiresIn() {
   let creation_mon = moment(creation_date).format("MM");
   if (curr_mon != creation_mon) {
     //create new token and set the value of day_created
-
-    //change value of day_created
-    data.day_created = moment().format("YYYY-MM-DD");
-    saveParams();
+    try {
+      const accessToken = await startServer();
+      console.log("Access token:", accessToken);
+      //change value of day_created and access token
+      data.access_token = accessToken;
+      data.day_created = moment().format("YYYY-MM-DD");
+      saveParams();
+    } catch (error) {
+      console.error("Error during OAuth process:", error);
+    }
   } else {
     if (curr_day - creation_day <= 10) {
       //token valid
       console.log("token valid");
     } else {
       //create new token and set the value of day_created
-
-      //change value of day_created
-      data.day_created = moment().format("YYYY-MM-DD");
-      saveParams();
+      try {
+        const accessToken = await startServer();
+        console.log("Access token:", accessToken);
+        //change value of day_created and access token
+        data.access_token = accessToken;
+        data.day_created = moment().format("YYYY-MM-DD");
+        saveParams();
+      } catch (error) {
+        console.error("Error during OAuth process:", error);
+      }
     }
   }
 }
@@ -62,8 +74,11 @@ async function getsgid() {
     });
     console.log(response.data.attachable_sgid);
     let template = fs.readFileSync("output.txt", "utf-8");
-    template = template.replace("<<chart_link>>", response.data.attachable_sgid);
-    fs.writeFileSync("output.txt",template);
+    template = template.replace(
+      "<<chart_link>>",
+      response.data.attachable_sgid
+    );
+    fs.writeFileSync("output.txt", template);
   } catch (error) {}
 }
 
@@ -90,4 +105,4 @@ const postToBasecamp = async () => {
   }
 };
 
-export { postToBasecamp, getsgid };
+export { postToBasecamp, getsgid, checkAndUpdateExpiresIn};
