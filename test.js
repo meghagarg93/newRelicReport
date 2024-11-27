@@ -21,9 +21,7 @@ checkUnique();
 // The JSON data
 
 const data = unique;
-console.log("compro", data);
 if (data === "Error Processing data") {
-  console.log("true");
   sendEmail(1);
 
 } else {
