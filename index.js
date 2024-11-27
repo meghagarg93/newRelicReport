@@ -5,6 +5,7 @@ import moment from "moment";
 import { log } from "console";
 import { query } from "express";
 import dotenv from "dotenv";
+import sendEmail from "./notify.js";
 
 dotenv.config(); // Load environment variables from .env
 
@@ -295,22 +296,77 @@ const QUERIES = {
 
 let unique = "";
 
+
+const delay = (delaytime) => {
+  return new Promise((resolve) => setTimeout(resolve, delaytime));
+};
+
+async function sendrequest(queryObject, retries) {
+  for (let i = 0; i < retries; i++) {
+    console.log('Attempt: ' + (i + 1));
+    if(i>0) 
+      await delay(5000);
+    
+    try {
+      const response = await axios.post(
+        "https://api.eu.newrelic.com/graphql",
+        { query: queryObject },
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+            "API-Key": API_KEY,
+          },
+        }
+      );
+
+      // Check if response contains expected data
+      if (response.data.data.actor.account.nrql != null) {
+        console.log("Successful response received.");
+        return response;
+      } else {
+        
+        console.log("Response does not contain expected data.");
+      }
+      
+    } catch (error) {
+      console.log(`Request failed on attempt ${i + 1}: ${error.message}`);
+    }
+  }
+
+  console.log("All retries exhausted.");
+  return null;
+}
+
+
 const fetchDataForQueryId = async (queryId) => {
   if (!QUERIES[queryId]) {
     throw new Error(`Invalid query ID: ${queryId}`);
   }
 
-  try {
-    const response = await axios.post(
-      "https://api.eu.newrelic.com/graphql",
-      { query: QUERIES[queryId] },
-      {
-        headers: {
-          "Content-Type": "application/json",
-          "API-Key": API_KEY,
-        },
-      }
-    );
+    // const response = await axios.post(
+    //   "https://api.eu.newrelic.com/graphql",
+    //   { query: QUERIES[queryId] },
+    //   {
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //       "API-Key": API_KEY,
+    //     },
+    //   }
+    // );
+
+
+    const response = await sendrequest(QUERIES[queryId], 3); 
+    // Store the response data
+    //error handling
+
+    if (response == null) {
+      //send failure mail
+      // await sendEmail(1);
+      throw new Error("Error in getting data");
+    } else {
+      // await delay(50000);
+    }
 
     const resultData = response.data.data.actor.account.nrql.results[0];
     if (queryId === "apdex" || queryId == "old_apdex") {
@@ -406,18 +462,11 @@ const fetchDataForQueryId = async (queryId) => {
       }
       return op;
     } else if(queryId == "old_ct1" || queryId == "old_ct2"){
-      // console.log("ooo");
-      // console.log(response);
-      // console.log(resultData.score);
       return resultData.score;
       
     } else {
       return Object.values(resultData)[0];
     }
-  } catch (error) {
-    console.error("Error fetching data:", error.message);
-    return "N/A";
-  }
 };
 
 const readCsvAndFetchData = async () => {
@@ -583,6 +632,8 @@ const readCsvAndFetchData = async () => {
       }
     } catch (error) {
       console.error(`Error processing query ID ${queryId}:`, error.message);
+      unique = "Error Processing data";
+      break;
     }
   }
 
@@ -703,5 +754,4 @@ const readCsvAndFetchData = async () => {
 
 // Execute the function
 await readCsvAndFetchData();
-
 export { unique };

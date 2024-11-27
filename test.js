@@ -6,6 +6,8 @@ import path from "path";
 import { unique } from "./index.js";
 // import {uploadToDrive} from "./driveUpload.js";
 import sendEmail from "./notify.js";
+import {postToBasecamp, getsgid} from "./basecamp.js";
+
 
 const checkUnique = async () => {
   // In a real scenario, you might need to use some synchronization mechanism to ensure unique is ready
@@ -16,68 +18,78 @@ const checkUnique = async () => {
 checkUnique();
 
 // The JSON data
+
 const data = unique;
+console.log("compro", data);
+if (data === "Error Processing data") {
+  console.log("true");
+  sendEmail(1);
 
-// Extracting the results
-const results = data.data.actor.account.nrql.results;
+} else {
+  // Extracting the results
 
-// Converting beginTimeSeconds to date strings and extracting values
-const labels = results.map((item) =>
-  new Date(item.beginTimeSeconds * 1000).toLocaleString()
-);
-const values = results.map((item) => item.value);
+  const results = data.data.actor.account.nrql.results;
 
-// Set up chart configuration
-const width = 1500; // Width of the graph
-const height = 600; // Height of the graph
+  // Converting beginTimeSeconds to date strings and extracting values
+  const labels = results.map((item) =>
+    new Date(item.beginTimeSeconds * 1000).toLocaleString()
+  );
+  const values = results.map((item) => item.value);
 
-const chartJSNodeCanvas = new ChartJSNodeCanvas({ width, height });
+  // Set up chart configuration
+  const width = 1500; // Width of the graph
+  const height = 600; // Height of the graph
 
-const configuration = {
-  type: "line",
-  data: {
-    labels: labels,
-    datasets: [
-      {
-        label: "Concurrency per 15 mins",
-        data: values,
-        borderColor: "rgba(75, 192, 192, 1)",
-        tension: 0.1,
-      },
-    ],
-  },
-  options: {
-    scales: {
-      x: {
-        title: {
-          display: true,
-          text: "Time",
+  const chartJSNodeCanvas = new ChartJSNodeCanvas({ width, height });
+
+  const configuration = {
+    type: "line",
+    data: {
+      labels: labels,
+      datasets: [
+        {
+          label: "Concurrency per 15 mins",
+          data: values,
+          borderColor: "rgba(75, 192, 192, 1)",
+          tension: 0.1,
         },
-      },
-      y: {
-        title: {
-          display: true,
-          text: "Value",
+      ],
+    },
+    options: {
+      scales: {
+        x: {
+          title: {
+            display: true,
+            text: "Time",
+          },
+        },
+        y: {
+          title: {
+            display: true,
+            text: "Value",
+          },
         },
       },
     },
-  },
-};
+  };
 
-// Render chart and save it as an image
-(async () => {
-  try {
-    const imageBuffer = await chartJSNodeCanvas.renderToBuffer(configuration);
-    const chartPath = path.join('', "chart.png");
-    fs.writeFileSync(chartPath, imageBuffer);
-    console.log("Chart saved as chart.png");
+  // Render chart and save it as an image
+  (async () => {
+    try {
+      const imageBuffer = await chartJSNodeCanvas.renderToBuffer(configuration);
+      const chartPath = path.join("", "chart.png");
+      fs.writeFileSync(chartPath, imageBuffer);
+      console.log("Chart saved as chart.png");
 
-    // Call the drive upload function
-    // await uploadToDrive("Upload message", { chart: "chart.png" });
-    // console.log("Chart uploaded to Google Drive");
-    await sendEmail();
+      // Call the drive upload function
+      // await uploadToDrive("Upload message", { chart: "chart.png" });
+      // console.log("Chart uploaded to Google Drive");
+      await sendEmail(0);
+      await getsgid();
+      await postToBasecamp();
 
-  } catch (error) {
-    console.error("Error generating chart:", error);
-  }
-})();
+    } catch (error) {
+      console.error("Error generating chart:", error);
+    }
+  })();
+}
