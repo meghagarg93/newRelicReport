@@ -42,7 +42,8 @@ const openAuthUrl = async () => {
     const authUrl = `https://launchpad.37signals.com/authorization/new?type=web_server&client_id=${clientId}&redirect_uri=${encodeURIComponent(redirectUri)}`;
     console.log("URL to visit: " + authUrl);
     browser = await puppeteer.launch({ headless: true, slowMo: 50 });
-
+    console.log(browser);
+    
     const page = await browser.newPage();
     await page.goto(authUrl);
 
