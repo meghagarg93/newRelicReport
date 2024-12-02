@@ -87,7 +87,7 @@ if (data === "Error Processing data") {
       await getsgid();
       await checkAndUpdateExpiresIn();
       await sendEmail(0);
-      await postToBasecamp();
+      // await postToBasecamp();
 
     } catch (error) {
       console.error("Error generating chart:", error);
