@@ -51,7 +51,7 @@ const openAuthUrl = async () => {
   )}`;
   console.log("URL to visit: " + authUrl);
 
-    browser = await puppeteer.launch({ headless: true, slowMo: 50 });
+    browser = await puppeteer.launch({ headless: true,args: ['--no-sandbox', '--disable-setuid-sandbox'], slowMo: 50 });
     console.log(browser);
 
   const page = await browser.newPage();
