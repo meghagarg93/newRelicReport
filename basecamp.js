@@ -91,15 +91,15 @@ const postToBasecamp = async () => {
   };
 
   const report = fs.readFileSync(`output.txt`, `utf8`);
-  console.log(report);
+  // console.log(report);
   const body = {
     content: report,
   };
   try {
-    console.log(body.content);
+    // console.log(body.content);
 
     const response = await axios.post(url, body, { headers });
-    console.log(response);
+    // console.log(response);
   } catch (error) {
     console.log(error);
   }
