@@ -50,6 +50,7 @@ const openAuthUrl = async () => {
     redirectUri
   )}`;
   console.log("URL to visit: " + authUrl);
+
     browser = await puppeteer.launch({ headless: true, slowMo: 50 });
     console.log(browser);
 
