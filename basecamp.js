@@ -96,9 +96,7 @@ const postToBasecamp = async () => {
     content: report,
   };
   try {
-    // console.log(body.content);
     const response = await axios.post(url, body, { headers });
-    // console.log(response);
   } catch (error) {
     console.log(error);
   }
