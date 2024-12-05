@@ -97,7 +97,6 @@ const postToBasecamp = async () => {
   };
   try {
     // console.log(body.content);
-
     const response = await axios.post(url, body, { headers });
     // console.log(response);
   } catch (error) {
@@ -106,5 +105,3 @@ const postToBasecamp = async () => {
 };
 
 export { postToBasecamp, getsgid, checkAndUpdateExpiresIn};
-
-
