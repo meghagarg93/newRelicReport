@@ -1,45 +1,45 @@
 New Relic Daily Monitoring 
 
-Observations TimeFrame : 2024-12-11 10:00:00+0530 - 2024-12-12 10:00:00+0530
+Observations TimeFrame : 2024-12-12 10:00:00+0530 - 2024-12-13 10:00:00+0530
 
 As part of daily performance monitoring activity, I have provided below my observations for Infrastructure and Performance metrics.
 
-Maximum Concurrent Users/15 mins – 6747 at 12/11/2024, 5:00:00 PM
+Maximum Concurrent Users/15 mins – 5616 at 12/12/2024, 3:45:00 PM
 
 
-<bc-attachment sgid="eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaTVuYVdRNkx5OWlZek12UVhSMFlXTm9iV1Z1ZEM4Mk5qazVNall3TnpjX1pYaHdhWEpsYzE5cGJnWTZCa1ZVIiwiZXhwIjpudWxsLCJwdXIiOiJhdHRhY2hhYmxlIn19--51778735c63c8eb160381705fc6ec97b6d63c29f" caption="chart"></bc-attachment>
+<bc-attachment sgid="eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaTVuYVdRNkx5OWlZek12UVhSMFlXTm9iV1Z1ZEM4Mk56QXpOamszTkRJX1pYaHdhWEpsYzE5cGJnWTZCa1ZVIiwiZXhwIjpudWxsLCJwdXIiOiJhdHRhY2hhYmxlIn19--2f5164f33c9646906c1596ac65855e687e15f900" caption="chart"></bc-attachment>
 
 Total Actions:
 =========
--Total Actions  – 2.36 M
+-Total Actions  – 2.14 M
 -New Registrations – 6 k
--XAPI Statements Count/day – 6.48 M
--Peak XAPI Statements Count/hour – 422 K
+-XAPI Statements Count/day – 5.97 M
+-Peak XAPI Statements Count/hour – 362 K
 
 
 Infrastructure:
 =========
 Elasticache Memory usage:
--Analytic ClassRecord Memory used is 48.21 %
--Analytics Memory used is 8.87 %
+-Analytic ClassRecord Memory used is 46.66 %
+-Analytics Memory used is 8.31 %
 
 
 Performance:
 =========
-1. Average Largest Contentful Paint (LCP): 3.28 sec
+1. Average Largest Contentful Paint (LCP): 3.15 sec
 
-2. Average First Contentful Paint (FCP): 1.75 sec
+2. Average First Contentful Paint (FCP): 1.74 sec
 
 3. Daily Apdex score is: 0.87 (Same as the previous day, i.e. 0.87)
 
 Top countries:
--MX: Current: 0.89 (Increased from the previous day, i.e. 0.88)
--EC: Current: 0.83 (Increased from the previous day, i.e. 0.82)
+-MX: Current: 0.9 (Increased from the previous day, i.e. 0.89)
+-EC: Current: 0.84 (Increased from the previous day, i.e. 0.83)
 
 4. Average Page Response Time:
-   - Average Page Response Time (SPA) : 4.28 s (Increased by 60.74 ms from
+   - Average Page Response Time (SPA) : 4.23 s (Reduced by 52.24 ms from
 the previous day)
-   - Average Page Response Time (SPA for 99.9% users) ~3.55 s (Increased by  30 ms from
+   - Average Page Response Time (SPA for 99.9% users) ~3.47 s (Reduced by  80 ms from
 the previous day)
 
 
@@ -50,10 +50,90 @@ No Anomalies were detected during this time frame.
 
 Incidents:
 =========
-OpenSearchService | Prod | High CPU Usage 
-  Provider . CPU Utilization . Maximum > 80.0 for at least 5 minutes on 'es-logs-cup-prod1-new' : 7 occurrences 
+C1 | PROD | Gigya SSL Failure 
+  CambridgeOne | Prod | Gigya SSL Check query result is > 0.0 for 1 minutes on 'C1 | PROD | Gigya SSL Failure' : 1 occurrences 
 
-OpenSearchService | Prod | High CPU Usage 
-  Provider . CPU Utilization . Maximum > 70.0 for at least 5 minutes on 'es-logs-cup-prod1-new' : 7 occurrences 
+Synthetic monitor failure for IELTSi Test launch 
+  Monitor failed for location Singapore, SG on 'IELTSi | Launch Test - Synthetic Test (During Deployment)' : 1 occurrences 
 
+
+ Browser monitor global outage for Synthetic monitor 
+ Monitor failed for location Tokyo, JP on 'IELTSi | Launch Test - Synthetic Test - Outage'
+ This incident was open on: 12/12/2024, 11:25:00 and was closed on: 12/12/2024, 11:52:23
+
+ Browser monitor global outage for Synthetic monitor 
+ Monitor failed for location London, England, UK on 'IELTSi | Launch Test - Synthetic Test - Outage'
+ This incident was open on: 12/12/2024, 11:23:00 and was closed on: 12/12/2024, 11:50:31
+
+ Browser monitor global outage for Synthetic monitor 
+ Monitor failed for location Tokyo, JP on 'IELTSi | Launch Test - Synthetic Test - Outage'
+ This incident was open on: 12/12/2024, 08:37:00 and was closed on: 12/12/2024, 09:07:28
+
+ Browser monitor global outage for Synthetic monitor 
+ 1 or more locations failed on 'Compass | Launch Test - Synthetic Test - Outage'
+ This incident was open on: 12/12/2024, 08:00:00 and was closed on: 12/12/2024, 09:05:52
+
+ Browser monitor local outage for Synthetic monitor 
+ Monitor failed for location London, England, UK on 'IELTS | Login - Synthetic Test - Outage'
+ This incident was open on: 12/12/2024, 08:42:00 and was closed on: 12/12/2024, 08:56:50
+
+ Browser monitor global outage for Synthetic monitor 
+ Monitor failed for location London, England, UK on 'IELTSi | Launch Test - Synthetic Test - Outage'
+ This incident was open on: 12/12/2024, 07:52:00 and was closed on: 12/12/2024, 08:50:21
+
+ Browser monitor local outage for Synthetic monitor 
+ Monitor failed for location São Paulo, BR on 'IELTS | Login - Synthetic Test - Outage'
+ This incident was open on: 12/12/2024, 07:48:00 and was closed on: 12/12/2024, 08:47:16
+
+ Browser monitor local outage for Synthetic monitor 
+ Monitor failed for location Tokyo, JP on 'IELTS | Login - Synthetic Test - Outage'
+ This incident was open on: 12/12/2024, 07:53:00 and was closed on: 12/12/2024, 08:37:11
+
+ Browser monitor global outage for Synthetic monitor 
+ Litmus | Launch Test - Synthetic Test - Outage query result is > 0.0 for 1 minutes on 'Browser monitor global outage for Synthetic monitor'
+ This incident was open on: 12/12/2024, 07:50:00 and was closed on: 12/12/2024, 08:36:50
+
+ Browser monitor local outage for Synthetic monitor 
+ C1 - LTI | Integration - Synthetic Test - Outage query result is > 0.0 for 1 minutes on 'Browser monitor local outage for Synthetic monitor'
+ This incident was open on: 12/12/2024, 08:15:00 and was closed on: 12/12/2024, 08:31:08
+
+ Browser monitor local outage for Synthetic monitor 
+ Monitor failed for location London, England, UK on 'IELTS | Login - Synthetic Test - Outage'
+ This incident was open on: 12/12/2024, 07:58:00 and was closed on: 12/12/2024, 08:26:54
+
+ Browser monitor global outage for Synthetic monitor 
+ 3 or more locations failed on 'IELTS | Login - Synthetic Test - Outage'
+ This incident was open on: 12/12/2024, 07:58:00 and was closed on: 12/12/2024, 08:26:44
+
+ Browser monitor global outage for Synthetic monitor 
+ Monitor failed for location Tokyo, JP on 'IELTSi | Launch Test - Synthetic Test - Outage'
+ This incident was open on: 12/12/2024, 07:53:00 and was closed on: 12/12/2024, 08:22:25
+
+ Browser monitor global outage for Synthetic monitor 
+ Monitor failed for location London, England, UK on 'cambridgeone.org HOMEPAGE - Synthetic Test - Outage'
+ This incident was open on: 12/12/2024, 07:52:00 and was closed on: 12/12/2024, 08:20:00
+
+ Browser monitor local outage for Synthetic monitor 
+ Monitor failed for location London, England, UK on 'cambridgeone.org HOMEPAGE - Synthetic Test - Outage'
+ This incident was open on: 12/12/2024, 07:52:00 and was closed on: 12/12/2024, 08:19:55
+
+ Browser monitor local outage for Synthetic monitor 
+ Monitor failed for location São Paulo, BR on 'CambridgeOne | Login - Synthetic Test - Outage'
+ This incident was open on: 12/12/2024, 07:51:00 and was closed on: 12/12/2024, 08:19:41
+
+ Browser monitor local outage for Synthetic monitor 
+ Monitor failed for location London, England, UK on 'CambridgeOne | Login - Synthetic Test - Outage'
+ This incident was open on: 12/12/2024, 07:51:00 and was closed on: 12/12/2024, 08:19:37
+
+ Browser monitor global outage for Synthetic monitor 
+ 2 or more locations failed on 'CambridgeOne | Login - Synthetic Test - Outage'
+ This incident was open on: 12/12/2024, 07:51:30 and was closed on: 12/12/2024, 08:19:36
+
+ Browser monitor local outage for Synthetic monitor 
+ C1 - LTI | Integration - Synthetic Test - Outage query result is > 0.0 for 1 minutes on 'Browser monitor local outage for Synthetic monitor'
+ This incident was open on: 12/12/2024, 07:52:00 and was closed on: 12/12/2024, 08:17:50
+
+ Browser monitor local outage for Synthetic monitor 
+ Monitor failed for location Tokyo, JP on 'CambridgeOne | Login - Synthetic Test - Outage'
+ This incident was open on: 12/12/2024, 07:54:00 and was closed on: 12/12/2024, 08:08:08
 
