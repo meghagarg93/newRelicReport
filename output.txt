@@ -1,45 +1,45 @@
 New Relic Daily Monitoring 
 
-Observations TimeFrame : 2024-12-23 10:00:00+0530 - 2024-12-24 10:00:00+0530
+Observations TimeFrame : 2024-12-24 10:00:00+0530 - 2024-12-25 10:00:00+0530
 
 As part of daily performance monitoring activity, I have provided below my observations for Infrastructure and Performance metrics.
 
-Maximum Concurrent Users/15 mins – 2213 at 12/23/2024, 5:00:00 PM
+Maximum Concurrent Users/15 mins – 1677 at 12/24/2024, 4:15:00 PM
 
 
-<bc-attachment sgid="eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaTVuYVdRNkx5OWlZek12UVhSMFlXTm9iV1Z1ZEM4Mk56TTFOelE1T1RrX1pYaHdhWEpsYzE5cGJnWTZCa1ZVIiwiZXhwIjpudWxsLCJwdXIiOiJhdHRhY2hhYmxlIn19--0bd430c7b45f91982aca54a3b4e03e32b9308038" caption="chart"></bc-attachment>
+<bc-attachment sgid="eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaTVuYVdRNkx5OWlZek12UVhSMFlXTm9iV1Z1ZEM4Mk56TTNORGsxT1RJX1pYaHdhWEpsYzE5cGJnWTZCa1ZVIiwiZXhwIjpudWxsLCJwdXIiOiJhdHRhY2hhYmxlIn19--b35dc98b10fb7809fb9b1f3ba1adb11329854a0d" caption="chart"></bc-attachment>
 
 Total Actions:
 =========
--Total Actions  – 0.79 M
+-Total Actions  – 0.53 M
 -New Registrations – 2 k
--XAPI Statements Count/day – 2.12 M
--Peak XAPI Statements Count/hour – 155 K
+-XAPI Statements Count/day – 1.44 M
+-Peak XAPI Statements Count/hour – 128 K
 
 
 Infrastructure:
 =========
 Elasticache Memory usage:
--Analytic ClassRecord Memory used is 21.81 %
--Analytics Memory used is 3.71 %
+-Analytic ClassRecord Memory used is 19.82 %
+-Analytics Memory used is 3.02 %
 
 
 Performance:
 =========
-1. Average Largest Contentful Paint (LCP): 2.92 sec
+1. Average Largest Contentful Paint (LCP): 3.01 sec
 
-2. Average First Contentful Paint (FCP): 1.70 sec
+2. Average First Contentful Paint (FCP): 1.65 sec
 
 3. Daily Apdex score is: 0.87 (Same as the previous day, i.e. 0.87)
 
 Top countries:
 -TR: Current: 0.88 (Same as the previous day, i.e. 0.88)
--EC: Current: 0.86 (Reduced from the previous day, i.e. 0.87)
+-EC: Current: 0.87 (Increased from the previous day, i.e. 0.86)
 
 4. Average Page Response Time:
-   - Average Page Response Time (SPA) : 4.48 s (Increased by 260.29 ms from
+   - Average Page Response Time (SPA) : 4.54 s (Increased by 53.75 ms from
 the previous day)
-   - Average Page Response Time (SPA for 99.9% users) ~3.66 s (Increased by  200 ms from
+   - Average Page Response Time (SPA for 99.9% users) ~3.74 s (Increased by  80 ms from
 the previous day)
 
 
@@ -50,4 +50,11 @@ No Anomalies were detected during this time frame.
 
 Incidents:
 =========
-No Incidents were reported during this time frame.
+C1 | PROD | Gigya SSL Failure 
+  CambridgeOne | Prod | Gigya SSL Check query result is > 0.0 for 1 minutes on 'C1 | PROD | Gigya SSL Failure' : 1 occurrences 
+
+
+ Browser monitor global outage for Synthetic monitor 
+ Litmus | Launch Test - Synthetic Test - Outage query result is > 0.0 for 1 minutes on 'Browser monitor global outage for Synthetic monitor'
+ This incident was open on: 24/12/2024, 13:25:00 and was closed on: 24/12/2024, 13:44:31
+
