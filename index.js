@@ -57,7 +57,7 @@ const QUERIES = {
     {
       actor {
         account(id: ${ACCOUNT_ID}) {
-          nrql(query: "Select average(firstContentfulPaint) from PageView WHERE appName = 'c1-prod1' SINCE '${yesterday}' UNTIL '${today}'") {
+          nrql(query: "Select average(firstContentfulPaint) from PageView WHERE appName = 'c1-prod1' AND firstContentfulPaint IS NOT NULL SINCE '${yesterday}' UNTIL '${today}'") {
             results
           }
         }
@@ -68,7 +68,7 @@ const QUERIES = {
     {
       actor {
         account(id: ${ACCOUNT_ID}) {
-          nrql(query: "Select average(largestContentfulPaint) from PageViewTiming WHERE appName = 'c1-prod1' SINCE '${yesterday}' UNTIL '${today}'") {
+          nrql(query: "Select average(largestContentfulPaint) from PageViewTiming WHERE appName = 'c1-prod1' AND largestContentfulPaint IS NOT NULL SINCE '${yesterday}' UNTIL '${today}'") {
             results
           }
         }
@@ -524,6 +524,7 @@ const readCsvAndFetchData = async () => {
         averageDuration = data;
       } else if (queryId === "largestContentfulPaint") {
         largestContentfulPaint = data;
+        console.log("LCP value is :  " + largestContentfulPaint);
       } else if (queryId === "firstContentfulPaint") {
         firstContentfulPaint = data;
       } else if (queryId === "uniqueCount") {
