@@ -25,6 +25,12 @@ const daybfryesterday = reportDate
   .subtract(2, "day")
   .format("YYYY-MM-DD 10:00:00+0530");
 
+  const systemTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+
+console.log("System Timezone:", systemTimezone);
+console.log("Moment Timezone Offset:", reportDate.format("Z"));
+console.log("Today:", today);
+
 let var_percentile = "";
 let old_percentile = "";
 let ct1 = "";
@@ -523,6 +529,7 @@ const readCsvAndFetchData = async () => {
       } else if (queryId === "average_duration") {
         averageDuration = data;
       } else if (queryId === "largestContentfulPaint") {
+        console.log("LCP Query is : " +QUERIES.largestContentfulPaint);
         largestContentfulPaint = data;
         console.log("LCP value is :  " + largestContentfulPaint);
       } else if (queryId === "firstContentfulPaint") {
