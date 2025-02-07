@@ -2,10 +2,29 @@ import http from "http";
 import fetch from "node-fetch";
 import { parse } from "url";
 import puppeteer from "puppeteer";
+import dotenv from "dotenv";
+import CryptoJS from "crypto-js";
 
-const clientId = "6766ebab3a5cfa90092423593c66ef477307f7fb";
-const clientSecret = "7da4cfd60df564c9dc4b6229afa03cbbff05919d";
+
+dotenv.config(); // Load environment variables from .env
+
+const secretKey = process.env.SECRET_KEY; // Use API_KEY from .env
+
+
+const encryptedclientId = "U2FsdGVkX1/NvoGhZPkYjP2FcrUErmI/OFS5HOH3OMDdj64Agm1nUejs0iyKh4OySL6xYyzm291i2kMGS5gWZQ==";
+const clientId = decryptText(encryptedclientId, secretKey);
+
+const encryptedclientSecret = "U2FsdGVkX19fg2Z9UgfmKxsQi7FXA0hYhXWtzwx2UbHnQGdEROEFryy05VNnpoK2mfBJHeMVkPLxAwO05kBbFA==";
+const clientSecret = decryptText(encryptedclientSecret, secretKey);
+
 const redirectUri = "http://localhost:3000/callback";
+
+
+function decryptText(encryptedText, key) {
+  let bytes = CryptoJS.AES.decrypt(encryptedText, key);
+  return bytes.toString(CryptoJS.enc.Utf8);
+}
+
 
 let browser;
 
@@ -49,7 +68,6 @@ const openAuthUrl = async () => {
   const authUrl = `https://launchpad.37signals.com/authorization/new?type=web_server&client_id=${clientId}&redirect_uri=${encodeURIComponent(
     redirectUri
   )}`;
-  console.log("URL to visit: " + authUrl);
 
     browser = await puppeteer.launch({ headless: true,args: ['--no-sandbox', '--disable-setuid-sandbox'], slowMo: 50 });
     console.log(browser);
@@ -63,8 +81,12 @@ const openAuthUrl = async () => {
   await page.click('[name="button"]');
 
   await page.waitForSelector("[data-role=password_container]");
+
+  const encryptedPassword = "U2FsdGVkX19WGs02qYXRSiWD5TEkp7WN6YJ2jx+vXMo=";
+  const password = decryptText(encryptedPassword, secretKey);
+
   await page.waitForSelector("#password");
-  await page.type("#password", "Compro@12345");
+  await page.type("#password", password);
   await page.keyboard.press("Enter");
 
   await page.waitForSelector('button[type="submit"]');
