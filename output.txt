@@ -7,7 +7,7 @@ As part of daily performance monitoring activity, I have provided below my obser
 Maximum Concurrent Users/15 mins – 6887 at 2/6/2025, 4:15:00 PM
 
 
-<bc-attachment sgid="eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaTVuYVdRNkx5OWlZek12UVhSMFlXTm9iV1Z1ZEM4Mk9EY3hNekl5TnpNX1pYaHdhWEpsYzE5cGJnWTZCa1ZVIiwiZXhwIjpudWxsLCJwdXIiOiJhdHRhY2hhYmxlIn19--dbef1db3b9bd547166ecfe9db734254c0e4316d1" caption="chart"></bc-attachment>
+<bc-attachment sgid="eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaTVuYVdRNkx5OWlZek12UVhSMFlXTm9iV1Z1ZEM4Mk9EY3lNRGswTWpVX1pYaHdhWEpsYzE5cGJnWTZCa1ZVIiwiZXhwIjpudWxsLCJwdXIiOiJhdHRhY2hhYmxlIn19--634b39a9eb370ff07423c565b5bc655f0310875d" caption="chart"></bc-attachment>
 
 Total Actions:
 =========
@@ -37,7 +37,7 @@ Top countries:
 -EC: Current: 0.84 (Same as the previous day, i.e. 0.84)
 
 4. Average Page Response Time:
-   - Average Page Response Time (SPA) : 4.81 s (Increased by 75.43 ms from
+   - Average Page Response Time (SPA) : 4.81 s (Increased by 76.21 ms from
 the previous day)
    - Average Page Response Time (SPA for 99.9% users) ~3.88 s (Increased by  30 ms from
 the previous day)
