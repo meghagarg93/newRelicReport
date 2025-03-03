@@ -82,7 +82,7 @@ const openAuthUrl = async () => {
 
   await page.waitForSelector("[data-role=password_container]");
 
-  const encryptedPassword = "U2FsdGVkX19WGs02qYXRSiWD5TEkp7WN6YJ2jx+vXMo=";
+  const encryptedPassword = "U2FsdGVkX19jzRJrysMDUukki0IzbCEOSOqu+H1197Y=";
   const password = decryptText(encryptedPassword, secretKey);
 
   await page.waitForSelector("#password");
