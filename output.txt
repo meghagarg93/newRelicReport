@@ -7,7 +7,7 @@ As part of daily performance monitoring activity, I have provided below my obser
 Maximum Concurrent Users/15 mins – 5069 at 3/3/2025, 2:00:00 AM
 
 
-<bc-attachment sgid="<<chart_link>>" caption="chart"></bc-attachment>
+<bc-attachment sgid="eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaTVuYVdRNkx5OWlZek12UVhSMFlXTm9iV1Z1ZEM4Mk9UVXpNRFUyT0RZX1pYaHdhWEpsYzE5cGJnWTZCa1ZVIiwiZXhwIjpudWxsLCJwdXIiOiJhdHRhY2hhYmxlIn19--9387c814aa0dac5207d4dee4f073686dd66a108f" caption="chart"></bc-attachment>
 
 Total Actions:
 =========
