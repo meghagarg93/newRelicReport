@@ -1,45 +1,45 @@
 New Relic Daily Monitoring 
 
-Observations TimeFrame : 2025-03-07 10:00:00+0530 - 2025-03-08 10:00:00+0530
+Observations TimeFrame : 2025-03-08 10:00:00+0530 - 2025-03-09 10:00:00+0530
 
 As part of daily performance monitoring activity, I have provided below my observations for Infrastructure and Performance metrics.
 
-Maximum Concurrent Users/15 mins – 5881 at 3/7/2025, 3:00:00 PM
+Maximum Concurrent Users/15 mins – 4369 at 3/8/2025, 6:00:00 PM
 
 
-<bc-attachment sgid="eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaTVuYVdRNkx5OWlZek12UVhSMFlXTm9iV1Z1ZEM4Mk9UYzJORGN5TmpNX1pYaHdhWEpsYzE5cGJnWTZCa1ZVIiwiZXhwIjpudWxsLCJwdXIiOiJhdHRhY2hhYmxlIn19--1b23378f38e2a135ae6e8734651a8e0af93a5017" caption="chart"></bc-attachment>
+<bc-attachment sgid="eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaTVuYVdRNkx5OWlZek12UVhSMFlXTm9iV1Z1ZEM4Mk9UYzNNakExTXpBX1pYaHdhWEpsYzE5cGJnWTZCa1ZVIiwiZXhwIjpudWxsLCJwdXIiOiJhdHRhY2hhYmxlIn19--c527c64bce6aad6f52301d8535c0f2fb4847447d" caption="chart"></bc-attachment>
 
 Total Actions:
 =========
--Total Actions  – 2.31 M
--New Registrations – 6 k
--XAPI Statements Count/day – 6.87 M
--Peak XAPI Statements Count/hour – 488 K
+-Total Actions  – 1.78 M
+-New Registrations – 5 k
+-XAPI Statements Count/day – 5.92 M
+-Peak XAPI Statements Count/hour – 360 K
 
 
 Infrastructure:
 =========
 Elasticache Memory usage:
--Analytic ClassRecord Memory used is 53.21 %
--Analytics Memory used is 10.06 %
+-Analytic ClassRecord Memory used is 48.38 %
+-Analytics Memory used is 9.17 %
 
 
 Performance:
 =========
-1. Average Largest Contentful Paint (LCP): 3.03 sec
+1. Average Largest Contentful Paint (LCP): 2.72 sec
 
-2. Average First Contentful Paint (FCP): 1.69 sec
+2. Average First Contentful Paint (FCP): 1.57 sec
 
-3. Daily Apdex score is: 0.87 (Same as the previous day, i.e. 0.87)
+3. Daily Apdex score is: 0.88 (Increased from the previous day, i.e. 0.87)
 
 Top countries:
 -MX: Current: 0.89 (Same as the previous day, i.e. 0.89)
--EC: Current: 0.85 (Same as the previous day, i.e. 0.85)
+-EC: Current: 0.86 (Increased from the previous day, i.e. 0.85)
 
 4. Average Page Response Time:
-   - Average Page Response Time (SPA) : 4.25 s (Increased by 87.66 ms from
+   - Average Page Response Time (SPA) : 4.11 s (Reduced by 143.09 ms from
 the previous day)
-   - Average Page Response Time (SPA for 99.9% users) ~3.46 s (Increased by  60 ms from
+   - Average Page Response Time (SPA for 99.9% users) ~3.31 s (Reduced by  150 ms from
 the previous day)
 
 
@@ -50,13 +50,45 @@ No Anomalies were detected during this time frame.
 
 Incidents:
 =========
-OpenSearchService | Prod | High CPU Usage 
-  Provider . CPU Utilization . Maximum > 70.0 for at least 5 minutes on 'es-logs-cup-prod1-new' : 5 occurrences 
+Browser monitor global outage for Synthetic monitor 
+  Litmus | Launch Test - Synthetic Test (During Deployment) query result is > 0.0 for 1 minutes on 'Browser monitor global outage for Synthetic monitor' : 1 occurrences 
 
-OpenSearchService | Prod | High CPU Usage 
-  Provider . CPU Utilization . Maximum > 80.0 for at least 5 minutes on 'es-logs-cup-prod1-new' : 4 occurrences 
+Synthetic monitor failure for Cambridge One Login 
+  Monitor failed for location London, England, UK on 'CambridgeOne | Login - Synthetic Test (During Deployment)' : 1 occurrences 
 
-OpenSearchService | Prod | Cluster Status Yellow 
-  Provider . Cluster Status . Yellow . Maximum = 1.0 at least once in 5 minutes on 'es-logs-cup-prod1-new' : 1 occurrences 
+Synthetic monitor failure for Cambridge One Login 
+  Monitor failed for location Singapore, SG on 'CambridgeOne | Login - Synthetic Test (During Deployment)' : 1 occurrences 
 
+Synthetic monitor failure for Cambridge One Login 
+  Monitor failed for location São Paulo, BR on 'CambridgeOne | Login - Synthetic Test (During Deployment)' : 1 occurrences 
+
+Synthetic monitor failure for Compass Test 
+  Monitor failed for location London, England, UK on 'Compass | Launch Test - Synthetic Test (During Deployment)' : 1 occurrences 
+
+Synthetic monitor failure for Compass Test 
+  Monitor failed for location Singapore, SG on 'Compass | Launch Test - Synthetic Test (During Deployment)' : 1 occurrences 
+
+Synthetic monitor failure for Compass Test 
+  Monitor failed for location São Paulo, BR on 'Compass | Launch Test - Synthetic Test (During Deployment)' : 1 occurrences 
+
+Synthetic monitor failure for IELTSi Login 
+  Monitor failed for location Tokyo, JP on 'IELTS | Login - Synthetic Test (During Deployment)' : 1 occurrences 
+
+Synthetic monitor failure for IELTSi Test launch 
+  Monitor failed for location London, England, UK on 'IELTSi | Launch Test - Synthetic Test (During Deployment)' : 1 occurrences 
+
+Synthetic monitor failure for IELTSi Test launch 
+  Monitor failed for location Singapore, SG on 'IELTSi | Launch Test - Synthetic Test (During Deployment)' : 1 occurrences 
+
+Synthetic monitor failure for IELTSi Test launch 
+  Monitor failed for location São Paulo, BR on 'IELTSi | Launch Test - Synthetic Test (During Deployment)' : 1 occurrences 
+
+
+ Browser monitor global outage for Synthetic monitor 
+ Monitor failed for location Singapore, SG on 'IELTSi | Launch Test - Synthetic Test - Outage'
+ This incident was open on: 08/03/2025, 07:30:00 and was closed on: 08/03/2025, 07:32:25
+
+ Browser monitor global outage for Synthetic monitor 
+ Monitor failed for location São Paulo, BR on 'IELTSi | Launch Test - Synthetic Test - Outage'
+ This incident was open on: 08/03/2025, 07:19:00 and was closed on: 08/03/2025, 07:27:05
 
