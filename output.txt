@@ -1,45 +1,45 @@
 New Relic Daily Monitoring 
 
-Observations TimeFrame : 2025-03-21 10:00:00+0530 - 2025-03-22 10:00:00+0530
+Observations TimeFrame : 2025-03-22 10:00:00+0530 - 2025-03-23 10:00:00+0530
 
 As part of daily performance monitoring activity, I have provided below my observations for Infrastructure and Performance metrics.
 
-Maximum Concurrent Users/15 mins – 6324 at 3/21/2025, 5:00:00 PM
+Maximum Concurrent Users/15 mins – 4541 at 3/22/2025, 4:00:00 PM
 
 
-<bc-attachment sgid="eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaTVuYVdRNkx5OWlZek12UVhSMFlXTm9iV1Z1ZEM4M01ESTJOemsyTlRFX1pYaHdhWEpsYzE5cGJnWTZCa1ZVIiwiZXhwIjpudWxsLCJwdXIiOiJhdHRhY2hhYmxlIn19--c2bd0cd469a9afb1b25a2b5dfc6771700b2d6d78" caption="chart"></bc-attachment>
+<bc-attachment sgid="eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaTVuYVdRNkx5OWlZek12UVhSMFlXTm9iV1Z1ZEM4M01ESTNOVEl5TkRVX1pYaHdhWEpsYzE5cGJnWTZCa1ZVIiwiZXhwIjpudWxsLCJwdXIiOiJhdHRhY2hhYmxlIn19--2fb43d94d85a1b030fb1d2c03437443c1e02edb4" caption="chart"></bc-attachment>
 
 Total Actions:
 =========
--Total Actions  – 2.33 M
--New Registrations – 2 k
--XAPI Statements Count/day – 7.28 M
--Peak XAPI Statements Count/hour – 448 K
+-Total Actions  – 1.88 M
+-New Registrations – 1 k
+-XAPI Statements Count/day – 6.54 M
+-Peak XAPI Statements Count/hour – 373 K
 
 
 Infrastructure:
 =========
 Elasticache Memory usage:
--Analytic ClassRecord Memory used is 55.13 %
--Analytics Memory used is 10.04 %
+-Analytic ClassRecord Memory used is 51.62 %
+-Analytics Memory used is 9.48 %
 
 
 Performance:
 =========
-1. Average Largest Contentful Paint (LCP): 2.81 sec
+1. Average Largest Contentful Paint (LCP): 2.55 sec
 
-2. Average First Contentful Paint (FCP): 1.60 sec
+2. Average First Contentful Paint (FCP): 1.49 sec
 
-3. Daily Apdex score is: 0.87 (Same as the previous day, i.e. 0.87)
+3. Daily Apdex score is: 0.88 (Increased from the previous day, i.e. 0.87)
 
 Top countries:
 -MX: Current: 0.89 (Same as the previous day, i.e. 0.89)
--CO: Current: 0.87 (Same as the previous day, i.e. 0.87)
+-PE: Current: 0.88 (Same as the previous day, i.e. 0.88)
 
 4. Average Page Response Time:
-   - Average Page Response Time (SPA) : 4.16 s (Reduced by 12.95 ms from
+   - Average Page Response Time (SPA) : 3.95 s (Reduced by 211.09 ms from
 the previous day)
-   - Average Page Response Time (SPA for 99.9% users) ~3.42 s (Increased by  10 ms from
+   - Average Page Response Time (SPA for 99.9% users) ~3.24 s (Reduced by  180 ms from
 the previous day)
 
 
@@ -50,21 +50,13 @@ No Anomalies were detected during this time frame.
 
 Incidents:
 =========
-C1 | PROD | Gigya SSL Failure 
-  CambridgeOne | Prod | Gigya SSL Check query result is > 0.0 for 1 minutes on 'C1 | PROD | Gigya SSL Failure' : 1 occurrences 
-
-OpenSearchService | Prod | High CPU Usage 
-  Provider . CPU Utilization . Maximum > 80.0 for at least 5 minutes on 'es-logs-cup-prod1-new' : 1 occurrences 
-
 OpenSearchService | Prod | High CPU Usage 
   Provider . CPU Utilization . Maximum > 70.0 for at least 5 minutes on 'es-logs-cup-prod1-new' : 1 occurrences 
 
+ElasticSearchService | LTI Prod | High CPU Usage 
+  logs-central-prod1 query result is > 80.0 for 5 minutes on 'ElasticSearchService | LTI Prod | High CPU Usage' : 1 occurrences 
 
- Browser monitor local outage for Synthetic monitor 
- C1 - LTI | Integration - Synthetic Test - Outage query result is > 0.0 for 1 minutes on 'Browser monitor local outage for Synthetic monitor'
- This incident was open on: 21/03/2025, 16:49:00 and was closed on: 21/03/2025, 17:07:54
+ElasticSearchService | LTI Prod | High CPU Usage 
+  logs-central-prod1 query result is > 70.0 for 5 minutes on 'ElasticSearchService | LTI Prod | High CPU Usage' : 1 occurrences 
 
- Browser monitor global outage for Synthetic monitor 
- C1 - LTI | Integration - Synthetic Test - Outage query result is > 1.0 for 1 minutes on 'Browser monitor global outage for Synthetic monitor'
- This incident was open on: 21/03/2025, 16:58:00 and was closed on: 21/03/2025, 17:07:51
 
