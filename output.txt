@@ -1,45 +1,45 @@
 New Relic Daily Monitoring 
 
-Observations TimeFrame : 2025-03-22 10:00:00+0530 - 2025-03-23 10:00:00+0530
+Observations TimeFrame : 2025-03-23 10:00:00+0530 - 2025-03-24 10:00:00+0530
 
 As part of daily performance monitoring activity, I have provided below my observations for Infrastructure and Performance metrics.
 
-Maximum Concurrent Users/15 mins – 4541 at 3/22/2025, 4:00:00 PM
+Maximum Concurrent Users/15 mins – 5448 at 3/23/2025, 6:15:00 PM
 
 
-<bc-attachment sgid="eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaTVuYVdRNkx5OWlZek12UVhSMFlXTm9iV1Z1ZEM4M01ESTNOVEl5TkRVX1pYaHdhWEpsYzE5cGJnWTZCa1ZVIiwiZXhwIjpudWxsLCJwdXIiOiJhdHRhY2hhYmxlIn19--2fb43d94d85a1b030fb1d2c03437443c1e02edb4" caption="chart"></bc-attachment>
+<bc-attachment sgid="eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaTVuYVdRNkx5OWlZek12UVhSMFlXTm9iV1Z1ZEM4M01ESTRORFkyTlRZX1pYaHdhWEpsYzE5cGJnWTZCa1ZVIiwiZXhwIjpudWxsLCJwdXIiOiJhdHRhY2hhYmxlIn19--1ad0b5f38e8aedfbde9c41e99f9e77da4900e75c" caption="chart"></bc-attachment>
 
 Total Actions:
 =========
--Total Actions  – 1.88 M
--New Registrations – 1 k
--XAPI Statements Count/day – 6.54 M
--Peak XAPI Statements Count/hour – 373 K
+-Total Actions  – 2.28 M
+-New Registrations – 2 k
+-XAPI Statements Count/day – 8.41 M
+-Peak XAPI Statements Count/hour – 579 K
 
 
 Infrastructure:
 =========
 Elasticache Memory usage:
--Analytic ClassRecord Memory used is 51.62 %
--Analytics Memory used is 9.48 %
+-Analytic ClassRecord Memory used is 50.91 %
+-Analytics Memory used is 11.15 %
 
 
 Performance:
 =========
-1. Average Largest Contentful Paint (LCP): 2.55 sec
+1. Average Largest Contentful Paint (LCP): 2.65 sec
 
-2. Average First Contentful Paint (FCP): 1.49 sec
+2. Average First Contentful Paint (FCP): 1.48 sec
 
-3. Daily Apdex score is: 0.88 (Increased from the previous day, i.e. 0.87)
+3. Daily Apdex score is: 0.88 (Same as the previous day, i.e. 0.88)
 
 Top countries:
--MX: Current: 0.89 (Same as the previous day, i.e. 0.89)
+-MX: Current: 0.9 (Increased from the previous day, i.e. 0.89)
 -PE: Current: 0.88 (Same as the previous day, i.e. 0.88)
 
 4. Average Page Response Time:
-   - Average Page Response Time (SPA) : 3.95 s (Reduced by 211.09 ms from
+   - Average Page Response Time (SPA) : 3.90 s (Reduced by 55.31 ms from
 the previous day)
-   - Average Page Response Time (SPA for 99.9% users) ~3.24 s (Reduced by  180 ms from
+   - Average Page Response Time (SPA for 99.9% users) ~3.16 s (Reduced by  80 ms from
 the previous day)
 
 
@@ -51,12 +51,73 @@ No Anomalies were detected during this time frame.
 Incidents:
 =========
 OpenSearchService | Prod | High CPU Usage 
+  Provider . CPU Utilization . Maximum > 80.0 for at least 5 minutes on 'es-logs-cup-prod1-new' : 1 occurrences 
+
+OpenSearchService | Prod | High CPU Usage 
   Provider . CPU Utilization . Maximum > 70.0 for at least 5 minutes on 'es-logs-cup-prod1-new' : 1 occurrences 
 
-ElasticSearchService | LTI Prod | High CPU Usage 
-  logs-central-prod1 query result is > 80.0 for 5 minutes on 'ElasticSearchService | LTI Prod | High CPU Usage' : 1 occurrences 
 
-ElasticSearchService | LTI Prod | High CPU Usage 
-  logs-central-prod1 query result is > 70.0 for 5 minutes on 'ElasticSearchService | LTI Prod | High CPU Usage' : 1 occurrences 
+ Browser monitor global outage for Synthetic monitor 
+ Litmus | Launch Test - Synthetic Test - Outage query result is > 0.0 for 1 minutes on 'Browser monitor global outage for Synthetic monitor'
+ This incident was open on: 23/03/2025, 07:48:00 and was closed on: 23/03/2025, 17:19:44
 
+ Browser monitor local outage for Synthetic monitor 
+ Monitor failed for location Tokyo, JP on 'IELTS | Login - Synthetic Test - Outage'
+ This incident was open on: 23/03/2025, 07:36:00 and was closed on: 23/03/2025, 17:07:16
+
+ Browser monitor local outage for Synthetic monitor 
+ Monitor failed for location São Paulo, BR on 'IELTS | Login - Synthetic Test - Outage'
+ This incident was open on: 23/03/2025, 07:31:00 and was closed on: 23/03/2025, 17:02:14
+
+ Browser monitor global outage for Synthetic monitor 
+ 3 or more locations failed on 'IELTS | Login - Synthetic Test - Outage'
+ This incident was open on: 23/03/2025, 16:11:30 and was closed on: 23/03/2025, 16:56:55
+
+ Browser monitor local outage for Synthetic monitor 
+ Monitor failed for location London, England, UK on 'IELTS | Login - Synthetic Test - Outage'
+ This incident was open on: 23/03/2025, 16:11:00 and was closed on: 23/03/2025, 16:56:48
+
+ Browser monitor global outage for Synthetic monitor 
+ 3 or more locations failed on 'IELTS | Login - Synthetic Test - Outage'
+ This incident was open on: 23/03/2025, 15:26:30 and was closed on: 23/03/2025, 15:41:48
+
+ Browser monitor local outage for Synthetic monitor 
+ Monitor failed for location London, England, UK on 'IELTS | Login - Synthetic Test - Outage'
+ This incident was open on: 23/03/2025, 15:26:00 and was closed on: 23/03/2025, 15:41:47
+
+ Browser monitor local outage for Synthetic monitor 
+ Monitor failed for location London, England, UK on 'IELTS | Login - Synthetic Test - Outage'
+ This incident was open on: 23/03/2025, 13:41:00 and was closed on: 23/03/2025, 13:56:55
+
+ Browser monitor global outage for Synthetic monitor 
+ 3 or more locations failed on 'IELTS | Login - Synthetic Test - Outage'
+ This incident was open on: 23/03/2025, 13:41:00 and was closed on: 23/03/2025, 13:56:47
+
+ Browser monitor global outage for Synthetic monitor 
+ 1 or more locations failed on 'Compass | Launch Test - Synthetic Test - Outage'
+ This incident was open on: 23/03/2025, 07:37:00 and was closed on: 23/03/2025, 08:40:14
+
+ Browser monitor global outage for Synthetic monitor 
+ Monitor failed for location São Paulo, BR on 'IELTSi | Launch Test - Synthetic Test - Outage'
+ This incident was open on: 23/03/2025, 07:30:00 and was closed on: 23/03/2025, 08:29:00
+
+ Browser monitor global outage for Synthetic monitor 
+ Monitor failed for location Singapore, SG on 'IELTSi | Launch Test - Synthetic Test - Outage'
+ This incident was open on: 23/03/2025, 07:32:00 and was closed on: 23/03/2025, 08:28:15
+
+ Browser monitor local outage for Synthetic monitor 
+ Monitor failed for location São Paulo, BR on 'CambridgeOne | Login - Synthetic Test - Outage'
+ This incident was open on: 23/03/2025, 07:42:00 and was closed on: 23/03/2025, 08:28:14
+
+ Browser monitor global outage for Synthetic monitor 
+ 2 or more locations failed on 'CambridgeOne | Login - Synthetic Test - Outage'
+ This incident was open on: 23/03/2025, 07:42:30 and was closed on: 23/03/2025, 08:27:29
+
+ Browser monitor local outage for Synthetic monitor 
+ Monitor failed for location Singapore, SG on 'CambridgeOne | Login - Synthetic Test - Outage'
+ This incident was open on: 23/03/2025, 07:31:00 and was closed on: 23/03/2025, 08:27:25
+
+ Browser monitor local outage for Synthetic monitor 
+ Monitor failed for location London, England, UK on 'CambridgeOne | Login - Synthetic Test - Outage'
+ This incident was open on: 23/03/2025, 07:51:00 and was closed on: 23/03/2025, 08:26:42
 
