@@ -1,45 +1,45 @@
 New Relic Daily Monitoring 
 
-Observations TimeFrame : 2025-03-30 10:00:00+0530 - 2025-03-31 10:00:00+0530
+Observations TimeFrame : 2025-03-31 10:00:00+0530 - 2025-04-01 10:00:00+0530
 
 As part of daily performance monitoring activity, I have provided below my observations for Infrastructure and Performance metrics.
 
-Maximum Concurrent Users/15 mins – 4858 at 3/31/2025, 1:30:00 AM
+Maximum Concurrent Users/15 mins – 7756 at 3/31/2025, 2:00:00 PM
 
 
-<bc-attachment sgid="eyJfcmFpbHMiOnsiZGF0YSI6ImdpZDovL2JjMy9BdHRhY2htZW50LzcwNTM5MjU0MD9leHBpcmVzX2luIiwicHVyIjoiYXR0YWNoYWJsZSJ9fQ==--5be6ea109b6c198d895190c38299a08a46d32e05" caption="chart"></bc-attachment>
+<bc-attachment sgid="eyJfcmFpbHMiOnsiZGF0YSI6ImdpZDovL2JjMy9BdHRhY2htZW50LzcwNTgxOTI3Nz9leHBpcmVzX2luIiwicHVyIjoiYXR0YWNoYWJsZSJ9fQ==--c6ca266b337bfcdde597dbe2d2159892bec24e89" caption="chart"></bc-attachment>
 
 Total Actions:
 =========
--Total Actions  – 1.86 M
--New Registrations – 1 k
--XAPI Statements Count/day – 6.90 M
--Peak XAPI Statements Count/hour – 487 K
+-Total Actions  – 2.60 M
+-New Registrations – 2 k
+-XAPI Statements Count/day – 7.28 M
+-Peak XAPI Statements Count/hour – 474 K
 
 
 Infrastructure:
 =========
 Elasticache Memory usage:
--Analytic ClassRecord Memory used is 47.23 %
--Analytics Memory used is 10.05 %
+-Analytic ClassRecord Memory used is 55.98 %
+-Analytics Memory used is 10.99 %
 
 
 Performance:
 =========
-1. Average Largest Contentful Paint (LCP): 2.56 sec
+1. Average Largest Contentful Paint (LCP): 2.82 sec
 
-2. Average First Contentful Paint (FCP): 1.49 sec
+2. Average First Contentful Paint (FCP): 1.63 sec
 
-3. Daily Apdex score is: 0.88 (Same as the previous day, i.e. 0.88)
+3. Daily Apdex score is: 0.87 (Reduced from the previous day, i.e. 0.88)
 
 Top countries:
--MX: Current: 0.9 (Same as the previous day, i.e. 0.9)
--CO: Current: 0.89 (Increased from the previous day, i.e. 0.88)
+-MX: Current: 0.88 (Reduced from the previous day, i.e. 0.9)
+-CO: Current: 0.88 (Reduced from the previous day, i.e. 0.89)
 
 4. Average Page Response Time:
-   - Average Page Response Time (SPA) : 3.98 s (Increased by 65.38 ms from
+   - Average Page Response Time (SPA) : 4.06 s (Increased by 74.77 ms from
 the previous day)
-   - Average Page Response Time (SPA for 99.9% users) ~3.19 s (Increased by  10 ms from
+   - Average Page Response Time (SPA for 99.9% users) ~3.35 s (Increased by  160 ms from
 the previous day)
 
 
@@ -50,4 +50,14 @@ No Anomalies were detected during this time frame.
 
 Incidents:
 =========
-No Incidents were reported during this time frame.
+OpenSearchService | Prod | High CPU Usage 
+  Provider . CPU Utilization . Maximum > 70.0 for at least 5 minutes on 'es-logs-cup-prod1-new' : 2 occurrences 
+
+OpenSearchService | Prod | High CPU Usage 
+  Provider . CPU Utilization . Maximum > 80.0 for at least 5 minutes on 'es-logs-cup-prod1-new' : 1 occurrences 
+
+
+ Browser monitor global outage for Synthetic monitor 
+ Monitor failed for location São Paulo, BR on 'IELTSi | Launch Test - Synthetic Test - Outage'
+ This incident was open on: 31/03/2025, 20:58:00 and was closed on: 31/03/2025, 21:08:21
+
