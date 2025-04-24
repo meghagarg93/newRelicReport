@@ -1,45 +1,45 @@
 New Relic Daily Monitoring 
 
-Observations TimeFrame : 2025-04-22 10:00:00+0530 - 2025-04-23 10:00:00+0530
+Observations TimeFrame : 2025-04-23 10:00:00+0530 - 2025-04-24 10:00:00+0530
 
 As part of daily performance monitoring activity, I have provided below my observations for Infrastructure and Performance metrics.
 
-Maximum Concurrent Users/15 mins – 6542 at 4/22/2025, 4:30:00 PM
+Maximum Concurrent Users/15 mins – 6242 at 4/23/2025, 2:00:00 PM
 
 
-<bc-attachment sgid="BAh7BkkiC19yYWlscwY6BkVUewdJIglkYXRhBjsAVEkiLmdpZDovL2JjMy9BdHRhY2htZW50LzcxMzM3MDY5MT9leHBpcmVzX2luBjsAVEkiCHB1cgY7AFRJIg9hdHRhY2hhYmxlBjsAVA==--30f3721d9617fac5c205ffcb13812c5c27fa9155" caption="chart"></bc-attachment>
+<bc-attachment sgid="BAh7BkkiC19yYWlscwY6BkVUewdJIglkYXRhBjsAVEkiLmdpZDovL2JjMy9BdHRhY2htZW50LzcxMzgzMzk5OT9leHBpcmVzX2luBjsAVEkiCHB1cgY7AFRJIg9hdHRhY2hhYmxlBjsAVA==--2e9a8973fd582618be58dae8a8fcf9cf2e6ddefa" caption="chart"></bc-attachment>
 
 Total Actions:
 =========
--Total Actions  – 2.41 M
+-Total Actions  – 2.42 M
 -New Registrations – 2 k
--XAPI Statements Count/day – 7.09 M
--Peak XAPI Statements Count/hour – 448 K
+-XAPI Statements Count/day – 7.46 M
+-Peak XAPI Statements Count/hour – 489 K
 
 
 Infrastructure:
 =========
 Elasticache Memory usage:
--Analytic ClassRecord Memory used is 55.61 %
--Analytics Memory used is 10.77 %
+-Analytic ClassRecord Memory used is 57.07 %
+-Analytics Memory used is 11.23 %
 
 
 Performance:
 =========
-1. Average Largest Contentful Paint (LCP): 3.05 sec
+1. Average Largest Contentful Paint (LCP): 2.93 sec
 
-2. Average First Contentful Paint (FCP): 1.59 sec
+2. Average First Contentful Paint (FCP): 1.58 sec
 
 3. Daily Apdex score is: 0.87 (Same as the previous day, i.e. 0.87)
 
 Top countries:
--PE: Current: 0.87 (Reduced from the previous day, i.e. 0.88)
+-PE: Current: 0.88 (Increased from the previous day, i.e. 0.87)
 -MX: Current: 0.89 (Same as the previous day, i.e. 0.89)
 
 4. Average Page Response Time:
-   - Average Page Response Time (SPA) : 4.30 s (Reduced by 59.56 ms from
+   - Average Page Response Time (SPA) : 4.23 s (Reduced by 75.26 ms from
 the previous day)
-   - Average Page Response Time (SPA for 99.9% users) ~3.49 s (Reduced by  30 ms from
+   - Average Page Response Time (SPA for 99.9% users) ~3.42 s (Reduced by  70 ms from
 the previous day)
 
 
@@ -50,50 +50,4 @@ No Anomalies were detected during this time frame.
 
 Incidents:
 =========
-OpenSearchService | Prod | High CPU Usage 
-  Provider . CPU Utilization . Maximum > 70.0 for at least 5 minutes on 'es-logs-cup-prod1-new' : 3 occurrences 
-
-OpenSearchService | Prod | High CPU Usage 
-  Provider . CPU Utilization . Maximum > 80.0 for at least 5 minutes on 'es-logs-cup-prod1-new' : 1 occurrences 
-
-
- Browser monitor global outage for Synthetic monitor 
- Litmus | Launch Test - Synthetic Test - Outage query result is > 0.0 for 1 minutes on 'Browser monitor global outage for Synthetic monitor'
- This incident was open on: 22/04/2025, 21:50:00 and was closed on: 22/04/2025, 21:59:45
-
- Browser monitor global outage for Synthetic monitor 
- Litmus | Launch Test - Synthetic Test - Outage query result is > 0.0 for 1 minutes on 'Browser monitor global outage for Synthetic monitor'
- This incident was open on: 22/04/2025, 21:20:00 and was closed on: 22/04/2025, 21:51:13
-
- Browser monitor global outage for Synthetic monitor 
- Litmus | Launch Test - Synthetic Test - Outage query result is > 0.0 for 1 minutes on 'Browser monitor global outage for Synthetic monitor'
- This incident was open on: 22/04/2025, 20:50:00 and was closed on: 22/04/2025, 21:18:36
-
- Browser monitor global outage for Synthetic monitor 
- 1 or more locations failed on 'Compass | Launch Test - Synthetic Test - Outage'
- This incident was open on: 22/04/2025, 20:44:30 and was closed on: 22/04/2025, 21:07:23
-
- Browser monitor local outage for Synthetic monitor 
- C1 - LTI | Integration - Synthetic Test - Outage query result is > 0.0 for 1 minutes on 'Browser monitor local outage for Synthetic monitor'
- This incident was open on: 22/04/2025, 20:55:00 and was closed on: 22/04/2025, 21:04:58
-
- Browser monitor local outage for Synthetic monitor 
- C1 - LTI | Integration - Synthetic Test - Outage query result is > 0.0 for 1 minutes on 'Browser monitor local outage for Synthetic monitor'
- This incident was open on: 22/04/2025, 20:37:00 and was closed on: 22/04/2025, 20:57:14
-
- Browser monitor global outage for Synthetic monitor 
- Litmus | Launch Test - Synthetic Test - Outage query result is > 0.0 for 1 minutes on 'Browser monitor global outage for Synthetic monitor'
- This incident was open on: 22/04/2025, 20:24:00 and was closed on: 22/04/2025, 20:52:05
-
- Browser monitor global outage for Synthetic monitor 
- Monitor failed for location London, England, UK on 'IELTSi | Launch Test - Synthetic Test - Outage'
- This incident was open on: 22/04/2025, 20:34:00 and was closed on: 22/04/2025, 20:36:25
-
- Browser monitor local outage for Synthetic monitor 
- C1 - LTI | Integration - Synthetic Test - Outage query result is > 0.0 for 1 minutes on 'Browser monitor local outage for Synthetic monitor'
- This incident was open on: 22/04/2025, 20:28:00 and was closed on: 22/04/2025, 20:34:49
-
- Browser monitor global outage for Synthetic monitor 
- Monitor failed for location London, England, UK on 'IELTSi | Launch Test - Synthetic Test - Outage'
- This incident was open on: 22/04/2025, 20:27:00 and was closed on: 22/04/2025, 20:29:35
-
+No Incidents were reported during this time frame.
