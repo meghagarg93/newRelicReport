@@ -1,27 +1,27 @@
 New Relic Daily Monitoring 
 
-Observations TimeFrame : 2025-05-07 10:00:00+0530 - 2025-05-08 10:00:00+0530
+Observations TimeFrame : 2025-05-08 10:00:00+0530 - 2025-05-09 10:00:00+0530
 
 As part of daily performance monitoring activity, I have provided below my observations for Infrastructure and Performance metrics.
 
-Maximum Concurrent Users/15 mins – 7587 at 5/7/2025, 2:15:00 PM
+Maximum Concurrent Users/15 mins – 7483 at 5/8/2025, 2:00:00 PM
 
 
-<bc-attachment sgid="BAh7BkkiC19yYWlscwY6BkVUewdJIglkYXRhBjsAVEkiLmdpZDovL2JjMy9BdHRhY2htZW50LzcxODYyMTYzMD9leHBpcmVzX2luBjsAVEkiCHB1cgY7AFRJIg9hdHRhY2hhYmxlBjsAVA==--5ef5cb34cce2a4486854f37dabb30d3cc8ce42dd" caption="chart"></bc-attachment>
+<bc-attachment sgid="BAh7BkkiC19yYWlscwY6BkVUewdJIglkYXRhBjsAVEkiLmdpZDovL2JjMy9BdHRhY2htZW50LzcxOTA3OTI0MT9leHBpcmVzX2luBjsAVEkiCHB1cgY7AFRJIg9hdHRhY2hhYmxlBjsAVA==--d3a1b7281fb70e9dc663c4f784dff93ab4daaccf" caption="chart"></bc-attachment>
 
 Total Actions:
 =========
--Total Actions  – 2.95 M
+-Total Actions  – 2.88 M
 -New Registrations – 2 k
--XAPI Statements Count/day – 8.64 M
--Peak XAPI Statements Count/hour – 567 K
+-XAPI Statements Count/day – 8.86 M
+-Peak XAPI Statements Count/hour – 536 K
 
 
 Infrastructure:
 =========
 Elasticache Memory usage:
--Analytic ClassRecord Memory used is 65.31 %
--Analytics Memory used is 12.99 %
+-Analytic ClassRecord Memory used is 64.58 %
+-Analytics Memory used is 12.36 %
 
 
 Performance:
@@ -34,12 +34,12 @@ Performance:
 
 Top countries:
 -MX: Current: 0.89 (Same as the previous day, i.e. 0.89)
--EC: Current: 0.85 (Reduced from the previous day, i.e. 0.86)
+-EC: Current: 0.85 (Same as the previous day, i.e. 0.85)
 
 4. Average Page Response Time:
-   - Average Page Response Time (SPA) : 4.08 s (Increased by 45.58 ms from
+   - Average Page Response Time (SPA) : 4.08 s (Reduced by 2.28 ms from
 the previous day)
-   - Average Page Response Time (SPA for 99.9% users) ~3.34 s (Increased by  40 ms from
+   - Average Page Response Time (SPA for 99.9% users) ~3.30 s (Reduced by  40 ms from
 the previous day)
 
 
@@ -51,12 +51,14 @@ No Anomalies were detected during this time frame.
 Incidents:
 =========
 OpenSearchService | Prod | High CPU Usage 
-  Provider . CPU Utilization . Maximum > 80.0 for at least 5 minutes on 'es-logs-cup-prod1-new' : 1 occurrences 
-
-Synthetic monitor failure for Compass Test 
-  Monitor failed for location London, England, UK on 'Compass | Launch Test - Synthetic Test (During Deployment)' : 1 occurrences 
-
-OpenSearchService | Prod | High CPU Usage 
   Provider . CPU Utilization . Maximum > 70.0 for at least 5 minutes on 'es-logs-cup-prod1-new' : 1 occurrences 
 
+
+ Browser monitor local outage for Synthetic monitor 
+ C1 - LTI | Integration - Synthetic Test - Outage query result is > 0.0 for 1 minutes on 'Browser monitor local outage for Synthetic monitor'
+ This incident was open on: 08/05/2025, 07:07:00 and was closed on: 08/05/2025, 07:21:56
+
+ Browser monitor local outage for Synthetic monitor 
+ C1 - LTI | Integration - Synthetic Test - Outage query result is > 0.0 for 1 minutes on 'Browser monitor local outage for Synthetic monitor'
+ This incident was open on: 08/05/2025, 06:55:00 and was closed on: 08/05/2025, 07:04:58
 
