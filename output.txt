@@ -1,45 +1,45 @@
 New Relic Daily Monitoring 
 
-Observations TimeFrame : 2025-05-22 10:00:00+0530 - 2025-05-23 10:00:00+0530
+Observations TimeFrame : 2025-05-23 10:00:00+0530 - 2025-05-24 10:00:00+0530
 
 As part of daily performance monitoring activity, I have provided below my observations for Infrastructure and Performance metrics.
 
-Maximum Concurrent Users/15 mins – 7525 at 5/22/2025, 2:00:00 PM
+Maximum Concurrent Users/15 mins – 5728 at 5/23/2025, 2:00:00 PM
 
 
-<bc-attachment sgid="BAh7BkkiC19yYWlscwY6BkVUewdJIglkYXRhBjsAVEkiLmdpZDovL2JjMy9BdHRhY2htZW50LzcyNDAwMDA4MT9leHBpcmVzX2luBjsAVEkiCHB1cgY7AFRJIg9hdHRhY2hhYmxlBjsAVA==--e5551dde58dcf37de8589a17c3f590fb5b57a2af" caption="chart"></bc-attachment>
+<bc-attachment sgid="BAh7BkkiC19yYWlscwY6BkVUewdJIglkYXRhBjsAVEkiLmdpZDovL2JjMy9BdHRhY2htZW50LzcyNDM5MzI4Mj9leHBpcmVzX2luBjsAVEkiCHB1cgY7AFRJIg9hdHRhY2hhYmxlBjsAVA==--b2ab48c5617c1ec8808bf3a8b69dcaf86b365bf8" caption="chart"></bc-attachment>
 
 Total Actions:
 =========
--Total Actions  – 2.50 M
--New Registrations – 2 k
--XAPI Statements Count/day – 7.35 M
--Peak XAPI Statements Count/hour – 474 K
+-Total Actions  – 2.02 M
+-New Registrations – 1 k
+-XAPI Statements Count/day – 6.89 M
+-Peak XAPI Statements Count/hour – 464 K
 
 
 Infrastructure:
 =========
 Elasticache Memory usage:
--Analytic ClassRecord Memory used is 59.47 %
--Analytics Memory used is 10.99 %
+-Analytic ClassRecord Memory used is 56.78 %
+-Analytics Memory used is 10.27 %
 
 
 Performance:
 =========
-1. Average Largest Contentful Paint (LCP): 2.84 sec
+1. Average Largest Contentful Paint (LCP): 2.71 sec
 
-2. Average First Contentful Paint (FCP): 1.55 sec
+2. Average First Contentful Paint (FCP): 1.54 sec
 
-3. Daily Apdex score is: 0.88 (Same as the previous day, i.e. 0.88)
+3. Daily Apdex score is: 0.87 (Reduced from the previous day, i.e. 0.88)
 
 Top countries:
 -MX: Current: 0.89 (Same as the previous day, i.e. 0.89)
 -PE: Current: 0.89 (Same as the previous day, i.e. 0.89)
 
 4. Average Page Response Time:
-   - Average Page Response Time (SPA) : 3.95 s (Reduced by 31.68 ms from
+   - Average Page Response Time (SPA) : 4.11 s (Increased by 150.62 ms from
 the previous day)
-   - Average Page Response Time (SPA for 99.9% users) ~3.24 s (Reduced by  50 ms from
+   - Average Page Response Time (SPA for 99.9% users) ~3.35 s (Increased by  110 ms from
 the previous day)
 
 
@@ -50,9 +50,6 @@ No Anomalies were detected during this time frame.
 
 Incidents:
 =========
-OpenSearchService | Prod | High CPU Usage 
-  Provider . CPU Utilization . Maximum > 80.0 for at least 5 minutes on 'es-logs-cup-prod1-new' : 1 occurrences 
-
 OpenSearchService | Prod | High CPU Usage 
   Provider . CPU Utilization . Maximum > 70.0 for at least 5 minutes on 'es-logs-cup-prod1-new' : 1 occurrences 
 
