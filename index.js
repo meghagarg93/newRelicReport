@@ -41,7 +41,7 @@ const QUERIES = {
     {
       actor {
         account(id: ${ACCOUNT_ID}) {
-          nrql(query: "Select average(duration) from BrowserInteraction WHERE appName = 'c1-prod1' SINCE '${yesterday}' UNTIL '${today}'") {
+          nrql(query: "Select average(duration) from BrowserInteraction WHERE appName = 'c1-prod1' and duration < 300 SINCE '${yesterday}' UNTIL '${today}'") {
             results
           }
         }
@@ -52,7 +52,7 @@ const QUERIES = {
     {
       actor {
         account(id: ${ACCOUNT_ID}) {
-          nrql(query: "Select average(duration) from BrowserInteraction WHERE appName = 'c1-prod1' SINCE '${daybfryesterday}' UNTIL '${yesterday}'") {
+          nrql(query: "Select average(duration) from BrowserInteraction WHERE appName = 'c1-prod1' and duration < 300 SINCE '${daybfryesterday}' UNTIL '${yesterday}'") {
             results
           }
         }

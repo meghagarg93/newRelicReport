@@ -37,9 +37,7 @@ Top countries:
 -<<ct2>>: Current: <<apdexct2>> (<<Comparator3>> the previous day, i.e. <<cmpamt3>>)
 
 4. Average Page Response Time:
-   - Average Page Response Time (SPA) : <<averageDuration>> s (<<Comparator1>> by <<cmpamt1>> ms from
-the previous day)
-   - Average Page Response Time (SPA for 99.9% users) ~<<nnp_user>> s (<<Comparator4>>  <<old_nnp_user>> ms from
+   - Average Page Response Time (SPA for 99.9% users) : <<averageDuration>> s (<<Comparator1>> by <<cmpamt1>> ms from
 the previous day)
 
 
