@@ -4,12 +4,11 @@ import path from "path";
 import { unique } from "./index.js";
 // import {uploadToDrive} from "./driveUpload.js";
 import sendEmail from "./notify.js";
-import { postToBasecamp, getsgid, checkAndUpdateExpiresIn } from "./basecamp.js";
-import { startServer } from './startserver.js';
+import { postToBasecamp } from "./basecamp.js";
 
 const checkUnique = async () => {
   // In a real scenario, you might need to use some synchronization mechanism to ensure unique is ready
-    // console.log('Unique count:', unique);
+  // console.log('Unique count:', unique);
 };
 
 // Invoke the function to check the value
@@ -116,10 +115,11 @@ if (data === "Error Processing data") {
       // Call the drive upload function
       // await uploadToDrive("Upload message", { chart: "chart.png" });
       // console.log("Chart uploaded to Google Drive");
-      
-      await getsgid();
-      await checkAndUpdateExpiresIn();
+
+      // await getsgid();
+      // await checkAndUpdateExpiresIn();
       await sendEmail(0);
+
       await postToBasecamp();
 
     } catch (error) {
