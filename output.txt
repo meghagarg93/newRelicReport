@@ -1,43 +1,43 @@
 New Relic Daily Monitoring 
 
-Observations TimeFrame : 2025-07-22 10:00:00+0530 - 2025-07-23 10:00:00+0530
+Observations TimeFrame : 2025-07-23 10:00:00+0530 - 2025-07-24 10:00:00+0530
 
 As part of daily performance monitoring activity, I have provided below my observations for Infrastructure and Performance metrics.
 
-Maximum Concurrent Users/15 mins – 4419 at 7/23/2025, 1:45:00 AM
+Maximum Concurrent Users/15 mins – 3622 at 7/23/2025, 4:00:00 PM
 
 
-<bc-attachment sgid="BAh7BkkiC19yYWlscwY6BkVUewdJIglkYXRhBjsAVEkiLmdpZDovL2JjMy9BdHRhY2htZW50Lzc0NDM3NDgzMT9leHBpcmVzX2luBjsAVEkiCHB1cgY7AFRJIg9hdHRhY2hhYmxlBjsAVA==--ba24687f03dc22dd3e1c2b2edec7322b1b9186bc" caption="chart"></bc-attachment>
+<bc-attachment sgid="BAh7BkkiC19yYWlscwY6BkVUewdJIglkYXRhBjsAVEkiLmdpZDovL2JjMy9BdHRhY2htZW50Lzc0NDg0MDU3Nz9leHBpcmVzX2luBjsAVEkiCHB1cgY7AFRJIg9hdHRhY2hhYmxlBjsAVA==--feeaec1bbe08c1c6657636cc0386a1577561a235" caption="chart"></bc-attachment>
 
 Total Actions:
 =========
--Total Actions  – 1.45 M
+-Total Actions  – 1.27 M
 -New Registrations – 1 k
--XAPI Statements Count/day – 4.82 M
--Peak XAPI Statements Count/hour – 385 K
+-XAPI Statements Count/day – 3.57 M
+-Peak XAPI Statements Count/hour – 245 K
 
 
 Infrastructure:
 =========
 Elasticache Memory usage:
--Analytic ClassRecord Memory used is 30.83 %
--Analytics Memory used is 6.42 %
+-Analytic ClassRecord Memory used is 30.59 %
+-Analytics Memory used is 5.47 %
 
 
 Performance:
 =========
-1. Average Largest Contentful Paint (LCP): 2.63 sec
+1. Average Largest Contentful Paint (LCP): 3.24 sec
 
-2. Average First Contentful Paint (FCP): 1.52 sec
+2. Average First Contentful Paint (FCP): 1.51 sec
 
 3. Daily Apdex score is: 0.86 (Same as the previous day, i.e. 0.86)
 
 Top countries:
--PE: Current: 0.87 (Same as the previous day, i.e. 0.87)
 -EC: Current: 0.87 (Same as the previous day, i.e. 0.87)
+-CO: Current: 0.89 (Same as the previous day, i.e. 0.89)
 
 4. Average Page Response Time:
-   - Average Page Response Time (SPA for 99.9% users) : 3.54 s (Reduced by 53.08 ms from
+   - Average Page Response Time (SPA for 99.9% users) : 3.65 s (Increased by 105.61 ms from
 the previous day)
 
 
@@ -49,23 +49,3 @@ No Anomalies were detected during this time frame.
 Incidents:
 =========
 No Incidents were reported during this time frame.
- Browser monitor global outage for Synthetic monitor 
- Litmus | Launch Test - Synthetic Test - Outage query result is > 0.0 for 1 minutes on 'Browser monitor global outage for Synthetic monitor'
- This incident was open on: 22/07/2025, 11:54:00 and was closed on: 22/07/2025, 12:24:15
-
- Browser monitor local outage for Synthetic monitor 
- Monitor failed for location Singapore, SG on 'CambridgeOne | Login - Synthetic Test - Outage'
- This incident was open on: 22/07/2025, 11:53:00 and was closed on: 22/07/2025, 12:20:32
-
- Browser monitor local outage for Synthetic monitor 
- Monitor failed for location São Paulo, BR on 'CambridgeOne | Login - Synthetic Test - Outage'
- This incident was open on: 22/07/2025, 11:59:00 and was closed on: 22/07/2025, 12:20:03
-
- Browser monitor global outage for Synthetic monitor 
- 2 or more locations failed on 'CambridgeOne | Login - Synthetic Test - Outage'
- This incident was open on: 22/07/2025, 11:59:30 and was closed on: 22/07/2025, 12:19:58
-
- Browser monitor local outage for Synthetic monitor 
- Monitor failed for location London, England, UK on 'CambridgeOne | Login - Synthetic Test - Outage'
- This incident was open on: 22/07/2025, 12:02:00 and was closed on: 22/07/2025, 12:19:25
-
