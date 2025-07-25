@@ -1,32 +1,32 @@
 New Relic Daily Monitoring 
 
-Observations TimeFrame : 2025-07-23 10:00:00+0530 - 2025-07-24 10:00:00+0530
+Observations TimeFrame : 2025-07-24 10:00:00+0530 - 2025-07-25 10:00:00+0530
 
 As part of daily performance monitoring activity, I have provided below my observations for Infrastructure and Performance metrics.
 
-Maximum Concurrent Users/15 mins – 3622 at 7/23/2025, 4:00:00 PM
+Maximum Concurrent Users/15 mins – 3293 at 7/24/2025, 3:30:00 PM
 
 
-<bc-attachment sgid="BAh7BkkiC19yYWlscwY6BkVUewdJIglkYXRhBjsAVEkiLmdpZDovL2JjMy9BdHRhY2htZW50Lzc0NDg0MDU3Nz9leHBpcmVzX2luBjsAVEkiCHB1cgY7AFRJIg9hdHRhY2hhYmxlBjsAVA==--feeaec1bbe08c1c6657636cc0386a1577561a235" caption="chart"></bc-attachment>
+<bc-attachment sgid="BAh7BkkiC19yYWlscwY6BkVUewdJIglkYXRhBjsAVEkiLmdpZDovL2JjMy9BdHRhY2htZW50Lzc0NTMwMjc2Mz9leHBpcmVzX2luBjsAVEkiCHB1cgY7AFRJIg9hdHRhY2hhYmxlBjsAVA==--d728fc070ddbd90db163df72cb969e52d02a0920" caption="chart"></bc-attachment>
 
 Total Actions:
 =========
--Total Actions  – 1.27 M
+-Total Actions  – 1.20 M
 -New Registrations – 1 k
--XAPI Statements Count/day – 3.57 M
--Peak XAPI Statements Count/hour – 245 K
+-XAPI Statements Count/day – 3.49 M
+-Peak XAPI Statements Count/hour – 244 K
 
 
 Infrastructure:
 =========
 Elasticache Memory usage:
--Analytic ClassRecord Memory used is 30.59 %
--Analytics Memory used is 5.47 %
+-Analytic ClassRecord Memory used is 29.92 %
+-Analytics Memory used is 5.37 %
 
 
 Performance:
 =========
-1. Average Largest Contentful Paint (LCP): 3.24 sec
+1. Average Largest Contentful Paint (LCP): 2.94 sec
 
 2. Average First Contentful Paint (FCP): 1.51 sec
 
@@ -37,7 +37,7 @@ Top countries:
 -CO: Current: 0.89 (Same as the previous day, i.e. 0.89)
 
 4. Average Page Response Time:
-   - Average Page Response Time (SPA for 99.9% users) : 3.65 s (Increased by 105.61 ms from
+   - Average Page Response Time (SPA for 99.9% users) : 3.70 s (Increased by 53.46 ms from
 the previous day)
 
 
@@ -48,4 +48,7 @@ No Anomalies were detected during this time frame.
 
 Incidents:
 =========
-No Incidents were reported during this time frame.
+OpenSearchService | Prod | High CPU Usage 
+  Provider . CPU Utilization . Maximum > 70.0 for at least 5 minutes on 'es-logs-cup-prod1-new' : 1 occurrences 
+
+
