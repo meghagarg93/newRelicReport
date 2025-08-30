@@ -1,34 +1,34 @@
 New Relic Daily Monitoring 
 
-Observations TimeFrame : 2025-08-28 10:00:00+0530 - 2025-08-29 10:00:00+0530
+Observations TimeFrame : 2025-08-29 10:00:00+0530 - 2025-08-30 10:00:00+0530
 
 As part of daily performance monitoring activity, I have provided below my observations for Infrastructure and Performance metrics.
 
-Maximum Concurrent Users/15 mins – 6520 at 8/29/2025, 3:00:00 AM
+Maximum Concurrent Users/15 mins – 5453 at 8/29/2025, 4:30:00 AM
 
 
-<bc-attachment sgid="BAh7BkkiC19yYWlscwY6BkVUewdJIglkYXRhBjsAVEkiLmdpZDovL2JjMy9BdHRhY2htZW50Lzc1NzQ3Njg4Mz9leHBpcmVzX2luBjsAVEkiCHB1cgY7AFRJIg9hdHRhY2hhYmxlBjsAVA==--5cc674ea6fabb29bc0841dcd5f2f91a5263f0817" caption="chart"></bc-attachment>
+<bc-attachment sgid="BAh7BkkiC19yYWlscwY6BkVUewdJIglkYXRhBjsAVEkiLmdpZDovL2JjMy9BdHRhY2htZW50Lzc1Nzg3Njg1MT9leHBpcmVzX2luBjsAVEkiCHB1cgY7AFRJIg9hdHRhY2hhYmxlBjsAVA==--e2b290fca328d26945f42a2116a642a3e04149b6" caption="chart"></bc-attachment>
 
 Total Actions:
 =========
--Total Actions  – 2.04 M
+-Total Actions  – 1.92 M
 -New Registrations – 2 k
--XAPI Statements Count/day – 6.44 M
--Peak XAPI Statements Count/hour – 461 K
+-XAPI Statements Count/day – 6.55 M
+-Peak XAPI Statements Count/hour – 493 K
 
 
 Infrastructure:
 =========
 Elasticache Memory usage:
--Analytic ClassRecord Memory used is 39.73 %
--Analytics Memory used is 9.89 %
+-Analytic ClassRecord Memory used is 38.99 %
+-Analytics Memory used is 9.86 %
 
 
 Performance:
 =========
-1. Average Largest Contentful Paint (LCP): 2.75 sec
+1. Average Largest Contentful Paint (LCP): 2.69 sec
 
-2. Average First Contentful Paint (FCP): 1.64 sec
+2. Average First Contentful Paint (FCP): 1.53 sec
 
 3. Daily Apdex score is: 0.87 (Same as the previous day, i.e. 0.87)
 
@@ -37,7 +37,7 @@ Top countries:
 -PE: Current: 0.89 (Same as the previous day, i.e. 0.89)
 
 4. Average Page Response Time:
-   - Average Page Response Time (SPA for 99.9% users) : 3.43 s (Reduced by 37.38 ms from
+   - Average Page Response Time (SPA for 99.9% users) : 3.58 s (Increased by 156.12 ms from
 the previous day)
 
 
@@ -48,10 +48,4 @@ No Anomalies were detected during this time frame.
 
 Incidents:
 =========
-ECS |Prod | Microservices | Level 1 High CPU Usage 
-  Provider . Cpu Utilization . Average > 90.0 for at least 5 minutes on 'Auth2FollowUnfollowValidationWorkerWorker' : 1 occurrences 
-
-ECS |Prod | Microservices | Level 2 High CPU Usage Warning 
-  Provider . Cpu Utilization . Average > 85.0 for at least 5 minutes on 'Auth2FollowUnfollowValidationWorkerWorker' : 1 occurrences 
-
-
+No Incidents were reported during this time frame.
