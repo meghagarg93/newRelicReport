@@ -1,43 +1,43 @@
 New Relic Daily Monitoring 
 
-Observations TimeFrame : 2025-09-18 10:00:00+0530 - 2025-09-19 10:00:00+0530
+Observations TimeFrame : 2025-09-19 10:00:00+0530 - 2025-09-20 10:00:00+0530
 
 As part of daily performance monitoring activity, I have provided below my observations for Infrastructure and Performance metrics.
 
-Maximum Concurrent Users/15 mins – 8472 at 9/18/2025, 7:00:00 PM
+Maximum Concurrent Users/15 mins – 8284 at 9/19/2025, 3:15:00 PM
 
 
-<bc-attachment sgid="BAh7BkkiC19yYWlscwY6BkVUewdJIglkYXRhBjsAVEkiLmdpZDovL2JjMy9BdHRhY2htZW50Lzc2NTAwNTE1MT9leHBpcmVzX2luBjsAVEkiCHB1cgY7AFRJIg9hdHRhY2hhYmxlBjsAVA==--87e227ce07c5e87882f6ce3ec74e077bc07f0dd5" caption="chart"></bc-attachment>
+<bc-attachment sgid="BAh7BkkiC19yYWlscwY6BkVUewdJIglkYXRhBjsAVEkiLmdpZDovL2JjMy9BdHRhY2htZW50Lzc2NTQwNzAyOT9leHBpcmVzX2luBjsAVEkiCHB1cgY7AFRJIg9hdHRhY2hhYmxlBjsAVA==--9bb01e3245af65f0eab03dadcc0b976b13d64725" caption="chart"></bc-attachment>
 
 Total Actions:
 =========
--Total Actions  – 3.00 M
+-Total Actions  – 2.48 M
 -New Registrations – 3 k
--XAPI Statements Count/day – 8.32 M
--Peak XAPI Statements Count/hour – 591 K
+-XAPI Statements Count/day – 7.61 M
+-Peak XAPI Statements Count/hour – 562 K
 
 
 Infrastructure:
 =========
 Elasticache Memory usage:
--Analytic ClassRecord Memory used is 53.43 %
--Analytics Memory used is 12.07 %
+-Analytic ClassRecord Memory used is 52.78 %
+-Analytics Memory used is 11.23 %
 
 
 Performance:
 =========
-1. Average Largest Contentful Paint (LCP): 2.85 sec
+1. Average Largest Contentful Paint (LCP): 2.88 sec
 
-2. Average First Contentful Paint (FCP): 1.59 sec
+2. Average First Contentful Paint (FCP): 1.55 sec
 
 3. Daily Apdex score is: 0.87 (Same as the previous day, i.e. 0.87)
 
 Top countries:
 -MX: Current: 0.89 (Same as the previous day, i.e. 0.89)
--PE: Current: 0.88 (Reduced from the previous day, i.e. 0.89)
+-PE: Current: 0.89 (Increased from the previous day, i.e. 0.88)
 
 4. Average Page Response Time:
-   - Average Page Response Time (SPA for 99.9% users) : 3.51 s (Reduced by 13.40 ms from
+   - Average Page Response Time (SPA for 99.9% users) : 3.54 s (Increased by 32.05 ms from
 the previous day)
 
 
@@ -49,94 +49,9 @@ No Anomalies were detected during this time frame.
 Incidents:
 =========
 OpenSearchService | Prod | High CPU Usage 
+  Provider . CPU Utilization . Maximum > 80.0 for at least 5 minutes on 'es-logs-cup-prod1-new' : 2 occurrences 
+
+OpenSearchService | Prod | High CPU Usage 
   Provider . CPU Utilization . Maximum > 70.0 for at least 5 minutes on 'es-logs-cup-prod1-new' : 2 occurrences 
 
-
- Browser monitor local outage for Synthetic monitor 
- C1 - LTI | Integration - Synthetic Test - Outage query result is > 0.0 for 1 minutes on 'Browser monitor local outage for Synthetic monitor'
- This incident was open on: 19/09/2025, 04:14:00 and was closed on: 19/09/2025, 04:27:40
-
- Browser monitor local outage for Synthetic monitor 
- C1 - LTI | Integration - Synthetic Test - Outage query result is > 0.0 for 1 minutes on 'Browser monitor local outage for Synthetic monitor'
- This incident was open on: 19/09/2025, 03:13:00 and was closed on: 19/09/2025, 03:23:13
-
- Browser monitor local outage for Synthetic monitor 
- C1 - LTI | Integration - Synthetic Test - Outage query result is > 0.0 for 1 minutes on 'Browser monitor local outage for Synthetic monitor'
- This incident was open on: 19/09/2025, 03:06:00 and was closed on: 19/09/2025, 03:12:34
-
- Browser monitor local outage for Synthetic monitor 
- C1 - LTI | Integration - Synthetic Test - Outage query result is > 0.0 for 1 minutes on 'Browser monitor local outage for Synthetic monitor'
- This incident was open on: 19/09/2025, 01:39:00 and was closed on: 19/09/2025, 01:50:10
-
- Browser monitor local outage for Synthetic monitor 
- C1 - LTI | Integration - Synthetic Test - Outage query result is > 0.0 for 1 minutes on 'Browser monitor local outage for Synthetic monitor'
- This incident was open on: 19/09/2025, 00:29:00 and was closed on: 19/09/2025, 00:39:31
-
- Browser monitor local outage for Synthetic monitor 
- C1 - LTI | Integration - Synthetic Test - Outage query result is > 0.0 for 1 minutes on 'Browser monitor local outage for Synthetic monitor'
- This incident was open on: 18/09/2025, 23:54:00 and was closed on: 19/09/2025, 00:07:57
-
- Browser monitor local outage for Synthetic monitor 
- C1 - LTI | Integration - Synthetic Test - Outage query result is > 0.0 for 1 minutes on 'Browser monitor local outage for Synthetic monitor'
- This incident was open on: 18/09/2025, 22:22:00 and was closed on: 18/09/2025, 22:35:14
-
- Browser monitor local outage for Synthetic monitor 
- C1 - LTI | Integration - Synthetic Test - Outage query result is > 0.0 for 1 minutes on 'Browser monitor local outage for Synthetic monitor'
- This incident was open on: 18/09/2025, 22:11:00 and was closed on: 18/09/2025, 22:23:00
-
- Browser monitor local outage for Synthetic monitor 
- C1 - LTI | Integration - Synthetic Test - Outage query result is > 0.0 for 1 minutes on 'Browser monitor local outage for Synthetic monitor'
- This incident was open on: 18/09/2025, 21:22:00 and was closed on: 18/09/2025, 21:37:30
-
- Browser monitor local outage for Synthetic monitor 
- C1 - LTI | Integration - Synthetic Test - Outage query result is > 0.0 for 1 minutes on 'Browser monitor local outage for Synthetic monitor'
- This incident was open on: 18/09/2025, 21:09:00 and was closed on: 18/09/2025, 21:23:03
-
- Browser monitor local outage for Synthetic monitor 
- C1 - LTI | Integration - Synthetic Test - Outage query result is > 0.0 for 1 minutes on 'Browser monitor local outage for Synthetic monitor'
- This incident was open on: 18/09/2025, 20:56:00 and was closed on: 18/09/2025, 21:10:44
-
- Browser monitor local outage for Synthetic monitor 
- C1 - LTI | Integration - Synthetic Test - Outage query result is > 0.0 for 1 minutes on 'Browser monitor local outage for Synthetic monitor'
- This incident was open on: 18/09/2025, 20:39:00 and was closed on: 18/09/2025, 20:53:11
-
- Browser monitor local outage for Synthetic monitor 
- C1 - LTI | Integration - Synthetic Test - Outage query result is > 0.0 for 1 minutes on 'Browser monitor local outage for Synthetic monitor'
- This incident was open on: 18/09/2025, 20:09:00 and was closed on: 18/09/2025, 20:20:13
-
- Browser monitor local outage for Synthetic monitor 
- C1 - LTI | Integration - Synthetic Test - Outage query result is > 0.0 for 1 minutes on 'Browser monitor local outage for Synthetic monitor'
- This incident was open on: 18/09/2025, 19:44:00 and was closed on: 18/09/2025, 19:53:16
-
- Browser monitor local outage for Synthetic monitor 
- C1 - LTI | Integration - Synthetic Test - Outage query result is > 0.0 for 1 minutes on 'Browser monitor local outage for Synthetic monitor'
- This incident was open on: 18/09/2025, 19:07:00 and was closed on: 18/09/2025, 19:20:02
-
- Browser monitor local outage for Synthetic monitor 
- C1 - LTI | Integration - Synthetic Test - Outage query result is > 0.0 for 1 minutes on 'Browser monitor local outage for Synthetic monitor'
- This incident was open on: 18/09/2025, 18:54:00 and was closed on: 18/09/2025, 19:05:15
-
- Browser monitor local outage for Synthetic monitor 
- C1 - LTI | Integration - Synthetic Test - Outage query result is > 0.0 for 1 minutes on 'Browser monitor local outage for Synthetic monitor'
- This incident was open on: 18/09/2025, 18:29:00 and was closed on: 18/09/2025, 18:38:15
-
- Browser monitor local outage for Synthetic monitor 
- C1 - LTI | Integration - Synthetic Test - Outage query result is > 0.0 for 1 minutes on 'Browser monitor local outage for Synthetic monitor'
- This incident was open on: 18/09/2025, 16:56:00 and was closed on: 18/09/2025, 17:07:47
-
- Browser monitor local outage for Synthetic monitor 
- C1 - LTI | Integration - Synthetic Test - Outage query result is > 0.0 for 1 minutes on 'Browser monitor local outage for Synthetic monitor'
- This incident was open on: 18/09/2025, 16:44:00 and was closed on: 18/09/2025, 16:54:31
-
- Browser monitor local outage for Synthetic monitor 
- C1 - LTI | Integration - Synthetic Test - Outage query result is > 0.0 for 1 minutes on 'Browser monitor local outage for Synthetic monitor'
- This incident was open on: 18/09/2025, 15:39:00 and was closed on: 18/09/2025, 15:50:11
-
- Browser monitor local outage for Synthetic monitor 
- C1 - LTI | Integration - Synthetic Test - Outage query result is > 0.0 for 1 minutes on 'Browser monitor local outage for Synthetic monitor'
- This incident was open on: 18/09/2025, 14:56:00 and was closed on: 18/09/2025, 15:08:17
-
- Browser monitor local outage for Synthetic monitor 
- C1 - LTI | Integration - Synthetic Test - Outage query result is > 0.0 for 1 minutes on 'Browser monitor local outage for Synthetic monitor'
- This incident was open on: 18/09/2025, 14:39:00 and was closed on: 18/09/2025, 14:53:11
 
