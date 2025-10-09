@@ -1,27 +1,27 @@
 New Relic Daily Monitoring 
 
-Observations TimeFrame : 2025-10-07 10:00:00+0530 - 2025-10-08 10:00:00+0530
+Observations TimeFrame : 2025-10-08 10:00:00+0530 - 2025-10-09 10:00:00+0530
 
 As part of daily performance monitoring activity, I have provided below my observations for Infrastructure and Performance metrics.
 
-Maximum Concurrent Users/15 mins – 9888 at 10/7/2025, 5:00:00 PM
+Maximum Concurrent Users/15 mins – 9007 at 10/8/2025, 5:00:00 PM
 
 
-<bc-attachment sgid="BAh7BkkiC19yYWlscwY6BkVUewdJIglkYXRhBjsAVEkiLmdpZDovL2JjMy9BdHRhY2htZW50Lzc3MTcwNjE4ND9leHBpcmVzX2luBjsAVEkiCHB1cgY7AFRJIg9hdHRhY2hhYmxlBjsAVA==--4e918fe9afac66c0f5556bb4e65e37ae692e05f6" caption="chart"></bc-attachment>
+<bc-attachment sgid="BAh7BkkiC19yYWlscwY6BkVUewdJIglkYXRhBjsAVEkiLmdpZDovL2JjMy9BdHRhY2htZW50Lzc3MjE5NTkzMz9leHBpcmVzX2luBjsAVEkiCHB1cgY7AFRJIg9hdHRhY2hhYmxlBjsAVA==--380a8417edaef4e1dbc48cb5ef1d499824cb15c3" caption="chart"></bc-attachment>
 
 Total Actions:
 =========
--Total Actions  – 2.99 M
--New Registrations – 4 k
--XAPI Statements Count/day – 7.00 M
--Peak XAPI Statements Count/hour – 443 K
+-Total Actions  – 2.87 M
+-New Registrations – 3 k
+-XAPI Statements Count/day – 7.25 M
+-Peak XAPI Statements Count/hour – 459 K
 
 
 Infrastructure:
 =========
 Elasticache Memory usage:
--Analytic ClassRecord Memory used is 60.24 %
--Analytics Memory used is 10.70 %
+-Analytic ClassRecord Memory used is 59.36 %
+-Analytics Memory used is 11.00 %
 
 
 Performance:
@@ -33,11 +33,11 @@ Performance:
 3. Daily Apdex score is: 0.87 (Same as the previous day, i.e. 0.87)
 
 Top countries:
--MX: Current: 0.89 (Same as the previous day, i.e. 0.89)
+-MX: Current: 0.88 (Reduced from the previous day, i.e. 0.89)
 -ES: Current: 0.88 (Same as the previous day, i.e. 0.88)
 
 4. Average Page Response Time:
-   - Average Page Response Time (SPA for 99.9% users) : 3.50 s (Increased by 66.93 ms from
+   - Average Page Response Time (SPA for 99.9% users) : 3.47 s (Reduced by 23.85 ms from
 the previous day)
 
 
@@ -49,9 +49,12 @@ No Anomalies were detected during this time frame.
 Incidents:
 =========
 OpenSearchService | Prod | High CPU Usage 
-  Provider . CPU Utilization . Maximum > 70.0 for at least 5 minutes on 'es-logs-cup-prod1-new' : 2 occurrences 
+  Provider . CPU Utilization . Maximum > 80.0 for at least 5 minutes on 'es-logs-cup-prod1-new' : 3 occurrences 
+
+OpenSearchService | Prod | High CPU Usage 
+  Provider . CPU Utilization . Maximum > 70.0 for at least 5 minutes on 'es-logs-cup-prod1-new' : 3 occurrences 
 
 OpenSearchService | Prod | Low Free Storage Space 
-  Provider . Free Storage Space . Minimum < 150000.0 for at least 5 minutes on 'es-logs-cup-prod1-new' : 1 occurrences 
+  Provider . Free Storage Space . Minimum < 150000.0 for at least 5 minutes on 'es-logs-cup-prod1-new' : 2 occurrences 
 
 
