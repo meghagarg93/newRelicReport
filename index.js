@@ -679,7 +679,7 @@ const readCsvAndFetchData = async () => {
     .replace("<<apdexct2>>", apdexct2)
     .replace("<<Incidents_to_add>> ", incidents)
     .replace("<<maxTime>>", maxTime)
-    .replace("<<maxValue>>", maxValue)
+    .replace("<<maxValue>>", Math.round(maxValue / 10) * 10)
     .replace("<<new_reg>>", Number.parseFloat(new_reg / 1000).toFixed(0))
     .replace("<<nnp_user>>", Number.parseFloat(nnp_user).toFixed(2))
     .replace("<<incident2>>", incident2)
