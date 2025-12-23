@@ -1,43 +1,43 @@
 New Relic Daily Monitoring 
 
-Observations TimeFrame : 2025-12-21 10:00:00+0530 - 2025-12-22 10:00:00+0530
+Observations TimeFrame : 2025-12-22 10:00:00+0530 - 2025-12-23 10:00:00+0530
 
 As part of daily performance monitoring activity, I have provided below my observations for Infrastructure and Performance metrics.
 
-Maximum Concurrent Users/15 mins – 3610 at 12/21/2025, 4:00:00 PM
+Maximum Concurrent Users/15 mins – 3410 at 12/22/2025, 5:00:00 PM
 
 
-<bc-attachment sgid="BAh7BkkiC19yYWlscwY6BkVUewdJIglkYXRhBjsAVEkiLmdpZDovL2JjMy9BdHRhY2htZW50Lzc5ODExMTIyMj9leHBpcmVzX2luBjsAVEkiCHB1cgY7AFRJIg9hdHRhY2hhYmxlBjsAVA==--a0f5060e6f410dfa106064c2a7ee105aa3855d5d" caption="chart"></bc-attachment>
+<bc-attachment sgid="BAh7BkkiC19yYWlscwY6BkVUewdJIglkYXRhBjsAVEkiLmdpZDovL2JjMy9BdHRhY2htZW50Lzc5ODUxMzc1OD9leHBpcmVzX2luBjsAVEkiCHB1cgY7AFRJIg9hdHRhY2hhYmxlBjsAVA==--f41cbfccf713f53f9d39bdb6b2d8707bea4c1cc1" caption="chart"></bc-attachment>
 
 Total Actions:
 =========
--Total Actions  – 1.00 M
+-Total Actions  – 0.98 M
 -New Registrations – 1 k
--XAPI Statements Count/day – 3.60 M
--Peak XAPI Statements Count/hour – 239 K
+-XAPI Statements Count/day – 2.76 M
+-Peak XAPI Statements Count/hour – 192 K
 
 
 Infrastructure:
 =========
 Elasticache Memory usage:
--Analytic ClassRecord Memory used is 25.19 %
--Analytics Memory used is 4.49 %
+-Analytic ClassRecord Memory used is 23.82 %
+-Analytics Memory used is 4.34 %
 
 
 Performance:
 =========
-1. Average Largest Contentful Paint (LCP): 2.56 sec
+1. Average Largest Contentful Paint (LCP): 2.81 sec
 
-2. Average First Contentful Paint (FCP): 1.35 sec
+2. Average First Contentful Paint (FCP): 1.42 sec
 
 3. Daily Apdex score is: 0.86 (Same as the previous day, i.e. 0.86)
 
 Top countries:
 -TR: Current: 0.88 (Same as the previous day, i.e. 0.88)
--EC: Current: 0.86 (Reduced from the previous day, i.e. 0.87)
+-EC: Current: 0.85 (Reduced from the previous day, i.e. 0.86)
 
 4. Average Page Response Time:
-   - Average Page Response Time (SPA for 99.9% users) : 3.61 s (Reduced by 106.28 ms from
+   - Average Page Response Time (SPA for 99.9% users) : 3.70 s (Increased by 92.67 ms from
 the previous day)
 
 
