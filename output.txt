@@ -1,43 +1,43 @@
 New Relic Daily Monitoring 
 
-Observations TimeFrame : 2026-04-29 10:00:00+0530 - 2026-04-30 10:00:00+0530
+Observations TimeFrame : 2026-04-30 10:00:00+0530 - 2026-05-01 10:00:00+0530
 
 As part of daily performance monitoring activity, I have provided below my observations for Infrastructure and Performance metrics.
 
-Maximum Concurrent Users/15 mins – 9480 at 4/29/2026, 2:00:00 PM
+Maximum Concurrent Users/15 mins – 8160 at 4/30/2026, 2:00:00 PM
 
 
-<bc-attachment sgid="BAh7BkkiC19yYWlscwY6BkVUewdJIglkYXRhBjsAVEkiLmdpZDovL2JjMy9BdHRhY2htZW50Lzg0MjQ2MTkxMz9leHBpcmVzX2luBjsAVEkiCHB1cgY7AFRJIg9hdHRhY2hhYmxlBjsAVA==--893bfcd85353479be101e29fd70e43fc285a77e8" caption="chart"></bc-attachment>
+<bc-attachment sgid="BAh7BkkiC19yYWlscwY6BkVUewdJIglkYXRhBjsAVEkiLmdpZDovL2JjMy9BdHRhY2htZW50Lzg0Mjk1Mzg0MD9leHBpcmVzX2luBjsAVEkiCHB1cgY7AFRJIg9hdHRhY2hhYmxlBjsAVA==--42cb2ffd2ea803a4d2ad29f78c3ea04754dd190e" caption="chart"></bc-attachment>
 
 Total Actions:
 =========
--Total Actions  – 3.01 M
--New Registrations – 4 k
--XAPI Statements Count/day – 8.35 M
--Peak XAPI Statements Count/hour – 509 K
+-Total Actions  – 2.47 M
+-New Registrations – 3 k
+-XAPI Statements Count/day – 7.46 M
+-Peak XAPI Statements Count/hour – 441 K
 
 
 Infrastructure:
 =========
 Elasticache Memory usage:
--Analytic ClassRecord Memory used is 65.13 %
--Analytics Memory used is 12.33 %
+-Analytic ClassRecord Memory used is 63.57 %
+-Analytics Memory used is 11.22 %
 
 
 Performance:
 =========
-1. Average Largest Contentful Paint (LCP): 2.67 sec
+1. Average Largest Contentful Paint (LCP): 2.63 sec
 
-2. Average First Contentful Paint (FCP): 1.64 sec
+2. Average First Contentful Paint (FCP): 1.65 sec
 
-3. Daily Apdex score is: 0.87 (Increased from the previous day, i.e. 0.86)
+3. Daily Apdex score is: 0.87 (Same as the previous day, i.e. 0.87)
 
 Top countries:
--MX: Current: 0.89 (Increased from the previous day, i.e. 0.88)
--PE: Current: 0.88 (Increased from the previous day, i.e. 0.83)
+-MX: Current: 0.88 (Reduced from the previous day, i.e. 0.89)
+-PE: Current: 0.88 (Same as the previous day, i.e. 0.88)
 
 4. Average Page Response Time:
-   - Average Page Response Time (SPA for 99.9% users) : 3.53 s (Reduced by 314.20 ms from
+   - Average Page Response Time (SPA for 99.9% users) : 3.52 s (Reduced by 7.05 ms from
 the previous day)
 
 
@@ -48,15 +48,6 @@ No Anomalies were detected during this time frame.
 
 Incidents:
 =========
-OpenSearchService | Prod | Low Free Storage Space 
-  Provider . Free Storage Space . Minimum < 150000.0 for at least 5 minutes on 'es-logs-cup-prod1-new' : 2 occurrences 
-
-ECS |Prod | Apps | Level 1 High CPU Usage  
-  Provider . Cpu Utilization . Average > 70.0 for at least 5 minutes on 'DashboardWeb' : 1 occurrences 
-
-ECS |Prod | Apps | Level 2 High CPU Usage Warning 
-  Provider . Cpu Utilization . Average > 60.0 for at least 10 minutes on 'DashboardWeb' : 1 occurrences 
-
 ECS |Prod | Microservices | Level 1 High CPU Usage 
   Provider . Cpu Utilization . Average > 90.0 for at least 5 minutes on 'Auth2FollowUnfollowValidationWorkerWorker' : 1 occurrences 
 
@@ -64,17 +55,9 @@ ECS |Prod | Microservices | Level 2 High CPU Usage Warning
   Provider . Cpu Utilization . Average > 85.0 for at least 5 minutes on 'Auth2FollowUnfollowValidationWorkerWorker' : 1 occurrences 
 
 OpenSearchService | Prod | High CPU Usage 
-  Provider . CPU Utilization . Maximum > 80.0 for at least 5 minutes on 'es-logs-cup-prod1-new' : 1 occurrences 
-
-OpenSearchService | Prod | High CPU Usage 
   Provider . CPU Utilization . Maximum > 70.0 for at least 5 minutes on 'es-logs-cup-prod1-new' : 1 occurrences 
 
+OpenSearchService | Prod | Low Free Storage Space 
+  Provider . Free Storage Space . Minimum < 150000.0 for at least 5 minutes on 'es-logs-cup-prod1-new' : 1 occurrences 
 
- Browser monitor local outage for Synthetic monitor 
- C1 - LTI | Integration - Synthetic Test - Outage query result is > 0.0 for 1 minutes on 'Browser monitor local outage for Synthetic monitor'
- This incident was open on: 29/04/2026, 19:15:00 and was closed on: 29/04/2026, 19:32:22
-
- Browser monitor local outage for Synthetic monitor 
- C1 - LTI | Integration - Synthetic Test - Outage query result is > 0.0 for 1 minutes on 'Browser monitor local outage for Synthetic monitor'
- This incident was open on: 29/04/2026, 08:31:00 and was closed on: 29/04/2026, 08:44:34
 
