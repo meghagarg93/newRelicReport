@@ -1,43 +1,43 @@
 New Relic Daily Monitoring 
 
-Observations TimeFrame : 2026-05-04 10:00:00+0530 - 2026-05-05 10:00:00+0530
+Observations TimeFrame : 2026-05-05 10:00:00+0530 - 2026-05-06 10:00:00+0530
 
 As part of daily performance monitoring activity, I have provided below my observations for Infrastructure and Performance metrics.
 
-Maximum Concurrent Users/15 mins – 9120 at 5/4/2026, 2:15:00 PM
+Maximum Concurrent Users/15 mins – 8340 at 5/6/2026, 12:00:00 AM
 
 
-<bc-attachment sgid="BAh7BkkiC19yYWlscwY6BkVUewdJIglkYXRhBjsAVEkiLmdpZDovL2JjMy9BdHRhY2htZW50Lzg0Mzg3OTIyOT9leHBpcmVzX2luBjsAVEkiCHB1cgY7AFRJIg9hdHRhY2hhYmxlBjsAVA==--51d55b2cc2a6eefe03e7bc93d648935ee1106b1a" caption="chart"></bc-attachment>
+<bc-attachment sgid="BAh7BkkiC19yYWlscwY6BkVUewdJIglkYXRhBjsAVEkiLmdpZDovL2JjMy9BdHRhY2htZW50Lzg0NDM5Mzg5ND9leHBpcmVzX2luBjsAVEkiCHB1cgY7AFRJIg9hdHRhY2hhYmxlBjsAVA==--95c010e35d85b387eea0c6f873fb137193d00c64" caption="chart"></bc-attachment>
 
 Total Actions:
 =========
--Total Actions  – 2.96 M
--New Registrations – 4 k
--XAPI Statements Count/day – 8.21 M
--Peak XAPI Statements Count/hour – 513 K
+-Total Actions  – 2.98 M
+-New Registrations – 3 k
+-XAPI Statements Count/day – 8.32 M
+-Peak XAPI Statements Count/hour – 518 K
 
 
 Infrastructure:
 =========
 Elasticache Memory usage:
--Analytic ClassRecord Memory used is 64.79 %
--Analytics Memory used is 13.26 %
+-Analytic ClassRecord Memory used is 65.59 %
+-Analytics Memory used is 12.55 %
 
 
 Performance:
 =========
-1. Average Largest Contentful Paint (LCP): 2.61 sec
+1. Average Largest Contentful Paint (LCP): 2.73 sec
 
-2. Average First Contentful Paint (FCP): 1.64 sec
+2. Average First Contentful Paint (FCP): 1.69 sec
 
-3. Daily Apdex score is: 0.87 (Reduced from the previous day, i.e. 0.89)
+3. Daily Apdex score is: 0.87 (Same as the previous day, i.e. 0.87)
 
 Top countries:
--MX: Current: 0.89 (Reduced from the previous day, i.e. 0.9)
--PE: Current: 0.88 (Reduced from the previous day, i.e. 0.91)
+-MX: Current: 0.89 (Same as the previous day, i.e. 0.89)
+-PE: Current: 0.88 (Same as the previous day, i.e. 0.88)
 
 4. Average Page Response Time:
-   - Average Page Response Time (SPA for 99.9% users) : 3.49 s (Increased by 63.39 ms from
+   - Average Page Response Time (SPA for 99.9% users) : 3.52 s (Increased by 33.78 ms from
 the previous day)
 
 
@@ -48,7 +48,28 @@ No Anomalies were detected during this time frame.
 
 Incidents:
 =========
-OpenSearchService | Prod | High CPU Usage 
-  Provider . CPU Utilization . Maximum > 70.0 for at least 5 minutes on 'es-logs-cup-prod1-new' : 1 occurrences 
+No Incidents were reported during this time frame.
+ Browser monitor global outage for Synthetic monitor 
+ Litmus | Launch Test - Synthetic Test - Outage query result is > 0.0 for 1 minutes on 'Browser monitor global outage for Synthetic monitor'
+ This incident was open on: 05/05/2026, 09:46:00 and was closed on: 05/05/2026, 10:03:37
 
+ Browser monitor local outage for Synthetic monitor 
+ Monitor failed for location São Paulo, BR on 'CambridgeOne | Login - Synthetic Test - Outage'
+ This incident was open on: 05/05/2026, 09:30:00 and was closed on: 05/05/2026, 09:39:16
+
+ Browser monitor local outage for Synthetic monitor 
+ C1 - LTI | Integration - Synthetic Test - Outage query result is > 0.0 for 1 minutes on 'Browser monitor local outage for Synthetic monitor'
+ This incident was open on: 05/05/2026, 08:51:00 and was closed on: 05/05/2026, 09:01:17
+
+ Browser monitor global outage for Synthetic monitor 
+ Litmus | Launch Test - Synthetic Test - Outage query result is > 0.0 for 1 minutes on 'Browser monitor global outage for Synthetic monitor'
+ This incident was open on: 05/05/2026, 08:09:00 and was closed on: 05/05/2026, 08:18:27
+
+ Browser monitor global outage for Synthetic monitor 
+ Litmus | Launch Test - Synthetic Test - Outage query result is > 0.0 for 1 minutes on 'Browser monitor global outage for Synthetic monitor'
+ This incident was open on: 05/05/2026, 07:38:00 and was closed on: 05/05/2026, 08:12:02
+
+ Browser monitor global outage for Synthetic monitor 
+ Litmus | Launch Test - Synthetic Test - Outage query result is > 0.0 for 1 minutes on 'Browser monitor global outage for Synthetic monitor'
+ This incident was open on: 05/05/2026, 07:27:00 and was closed on: 05/05/2026, 07:40:58
 
