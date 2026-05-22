@@ -1,32 +1,32 @@
 New Relic Daily Monitoring 
 
-Observations TimeFrame : 2026-05-20 10:00:00+0530 - 2026-05-21 10:00:00+0530
+Observations TimeFrame : 2026-05-21 10:00:00+0530 - 2026-05-22 10:00:00+0530
 
 As part of daily performance monitoring activity, I have provided below my observations for Infrastructure and Performance metrics.
 
-Maximum Concurrent Users/15 mins – 9350 at 5/20/2026, 2:00:00 PM
+Maximum Concurrent Users/15 mins – 8900 at 5/21/2026, 5:00:00 PM
 
 
-<bc-attachment sgid="BAh7BkkiC19yYWlscwY6BkVUewdJIglkYXRhBjsAVEkiLmdpZDovL2JjMy9BdHRhY2htZW50Lzg1MDA4NjMwNj9leHBpcmVzX2luBjsAVEkiCHB1cgY7AFRJIg9hdHRhY2hhYmxlBjsAVA==--9bc673a68b1aa7a4c7d403878f1c6674c8ed722e" caption="chart"></bc-attachment>
+<bc-attachment sgid="BAh7BkkiC19yYWlscwY6BkVUewdJIglkYXRhBjsAVEkiLmdpZDovL2JjMy9BdHRhY2htZW50Lzg1MDYxMzYzNT9leHBpcmVzX2luBjsAVEkiCHB1cgY7AFRJIg9hdHRhY2hhYmxlBjsAVA==--c3a2c55bddd7a1d5583b4642ec19e65a00bcd592" caption="chart"></bc-attachment>
 
 Total Actions:
 =========
--Total Actions  – 3.03 M
--New Registrations – 4 k
--XAPI Statements Count/day – 8.62 M
--Peak XAPI Statements Count/hour – 625 K
+-Total Actions  – 2.93 M
+-New Registrations – 3 k
+-XAPI Statements Count/day – 8.42 M
+-Peak XAPI Statements Count/hour – 558 K
 
 
 Infrastructure:
 =========
 Elasticache Memory usage:
--Analytic ClassRecord Memory used is 63.45 %
--Analytics Memory used is 12.99 %
+-Analytic ClassRecord Memory used is 62.41 %
+-Analytics Memory used is 12.34 %
 
 
 Performance:
 =========
-1. Average Largest Contentful Paint (LCP): 2.62 sec
+1. Average Largest Contentful Paint (LCP): 2.66 sec
 
 2. Average First Contentful Paint (FCP): 1.62 sec
 
@@ -34,10 +34,10 @@ Performance:
 
 Top countries:
 -MX: Current: 0.89 (Same as the previous day, i.e. 0.89)
--EC: Current: 0.86 (Same as the previous day, i.e. 0.86)
+-PE: Current: 0.89 (Same as the previous day, i.e. 0.89)
 
 4. Average Page Response Time:
-   - Average Page Response Time (SPA for 99.9% users) : 3.42 s (Reduced by 3.12 ms from
+   - Average Page Response Time (SPA for 99.9% users) : 3.45 s (Increased by 31.19 ms from
 the previous day)
 
 
@@ -48,10 +48,4 @@ No Anomalies were detected during this time frame.
 
 Incidents:
 =========
-OpenSearchService | Prod | High CPU Usage 
-  Provider . CPU Utilization . Maximum > 70.0 for at least 5 minutes on 'es-logs-cup-prod1-new' : 1 occurrences 
-
-OpenSearchService | Prod | Low Free Storage Space 
-  Provider . Free Storage Space . Minimum < 150000.0 for at least 5 minutes on 'es-logs-cup-prod1-new' : 1 occurrences 
-
-
+No Incidents were reported during this time frame.
