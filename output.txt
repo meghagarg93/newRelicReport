@@ -1,43 +1,43 @@
 New Relic Daily Monitoring 
 
-Observations TimeFrame : 2026-06-23 10:00:00+0530 - 2026-06-24 10:00:00+0530
+Observations TimeFrame : 2026-06-24 10:00:00+0530 - 2026-06-25 10:00:00+0530
 
 As part of daily performance monitoring activity, I have provided below my observations for Infrastructure and Performance metrics.
 
-Maximum Concurrent Users/15 mins – 5900 at 6/23/2026, 2:00:00 PM
+Maximum Concurrent Users/15 mins – 6070 at 6/25/2026, 12:00:00 AM
 
 
-<bc-attachment sgid="BAh7BkkiC19yYWlscwY6BkVUewdJIglkYXRhBjsAVEkiLmdpZDovL2JjMy9BdHRhY2htZW50Lzg2MzI0MzMzOT9leHBpcmVzX2luBjsAVEkiCHB1cgY7AFRJIg9hdHRhY2hhYmxlBjsAVA==--15259af415cc22b36ed22fc4cb23cede1fbc544b" caption="chart"></bc-attachment>
+<bc-attachment sgid="BAh7BkkiC19yYWlscwY6BkVUewdJIglkYXRhBjsAVEkiLmdpZDovL2JjMy9BdHRhY2htZW50Lzg2Mzc2NDU0Mj9leHBpcmVzX2luBjsAVEkiCHB1cgY7AFRJIg9hdHRhY2hhYmxlBjsAVA==--321c54f5025a0e15718a325d1a38376de792dc0d" caption="chart"></bc-attachment>
 
 Total Actions:
 =========
--Total Actions  – 1.96 M
+-Total Actions  – 1.80 M
 -New Registrations – 3 k
--XAPI Statements Count/day – 5.79 M
--Peak XAPI Statements Count/hour – 419 K
+-XAPI Statements Count/day – 5.53 M
+-Peak XAPI Statements Count/hour – 402 K
 
 
 Infrastructure:
 =========
 Elasticache Memory usage:
--Analytic ClassRecord Memory used is 45.94 %
--Analytics Memory used is 8.76 %
+-Analytic ClassRecord Memory used is 41.81 %
+-Analytics Memory used is 8.37 %
 
 
 Performance:
 =========
 1. Average Largest Contentful Paint (LCP): 2.64 sec
 
-2. Average First Contentful Paint (FCP): 1.63 sec
+2. Average First Contentful Paint (FCP): 1.64 sec
 
 3. Daily Apdex score is: 0.87 (Same as the previous day, i.e. 0.87)
 
 Top countries:
 -PE: Current: 0.88 (Same as the previous day, i.e. 0.88)
--MX: Current: 0.89 (Same as the previous day, i.e. 0.89)
+-EC: Current: 0.85 (Same as the previous day, i.e. 0.85)
 
 4. Average Page Response Time:
-   - Average Page Response Time (SPA for 99.9% users) : 3.52 s (Increased by 55.04 ms from
+   - Average Page Response Time (SPA for 99.9% users) : 3.55 s (Increased by 32.71 ms from
 the previous day)
 
 
@@ -49,9 +49,12 @@ No Anomalies were detected during this time frame.
 Incidents:
 =========
 OpenSearchService | Prod | High CPU Usage 
-  Provider . CPU Utilization . Maximum > 80.0 for at least 5 minutes on 'es-logs-cup-prod1-new' : 1 occurrences 
+  Provider . CPU Utilization . Maximum > 70.0 for at least 5 minutes on 'es-logs-cup-prod1-new' : 2 occurrences 
 
-OpenSearchService | Prod | High CPU Usage 
-  Provider . CPU Utilization . Maximum > 70.0 for at least 5 minutes on 'es-logs-cup-prod1-new' : 1 occurrences 
+ECS |Prod | Microservices | Level 1 High CPU Usage 
+  Provider . Cpu Utilization . Average > 90.0 for at least 5 minutes on 'Auth2FollowUnfollowValidationWorkerWorker' : 1 occurrences 
+
+ECS |Prod | Microservices | Level 2 High CPU Usage Warning 
+  Provider . Cpu Utilization . Average > 85.0 for at least 5 minutes on 'Auth2FollowUnfollowValidationWorkerWorker' : 1 occurrences 
 
 
